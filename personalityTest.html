@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo hồ sơ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./fontawesome-free-6.5.2-web/css/all.min.css">
+   <style>
+    .larger-radio {
+        transform: scale(1.4); /* Điều chỉnh kích thước theo tỷ lệ */
+         /* Khoảng cách giữa các radio button */
+    }
+    body{
+        font-family: Georgia, serif;
+    }
+</style>
+</head>
+<body>
+     <!-- header -->
+    <!-- header -->
+    <header class="fixed top-0 left-0  right-0 z-20">
+           <div class="h-20 bg-[#EF0D4A] px-20 border-b border-white">
+            <a href="/home.html" class="flex items-center text-white  h-full">
+            <img src="./imgs//icons/header-icon.png " class="pt-1 h-full" alt="icon">
+            <p class="text-4xl font-bold">
+                Heartlink</p>
+           </a>   
+           </div>
+           <div class="bg-red-500 px-6 py-6 text-white flex items-center">
+            <ul class=" bg-slate-100 text-gray-600  rounded-full list-none max-md:px-1 flex items-center max-md:overflow-x-scroll whitespace-norwap" id="route_link">
+                <a href="/home.html" class="px-2 py-1 font-bold text-base whitespace-nowrap">Trang chủ</a>
+                <a href="/personalityTest.html" class="px-4 py-1 font-bold text-base whitespace-nowrap">Test tính cách</a>
+                <a href="/profile.html" class="px-4 py-1 font-bold text-base whitespace-nowrap">Tạo hồ sơ</a>
+                <a href="/authentication.html" class="px-4 py-1 font-bold text-base whitespace-nowrap">Xác thực hồ sơ</a>
+                <a href="/feedback.html" class="px-4 py-1 font-bold text-base whitespace-nowrap">Phản hồi từ khách hàng</a>
+                <a href="/login.html" class="px-4 py-1 font-bold text-base whitespace-nowrap hidden max-md:block">Đăng nhập</a>
+                <a href="/register.html" class="px-4 py-1 font-bold text-base whitespace-nowrap hidden max-md:block">Đăng kí</a>
+            </ul>
+            <a class="ml-auto px-4 text-lg font-bold text white block max-md:hidden" href="./register.html">
+                Đăng kí</a>
+
+                 <a class="px-4 text-lg font-bold text white block max-md:hidden" href="/login.html">
+                Đăng nhập</a>
+           </div>
+
+    </header>
+        <!-- body -->
+        <div class="mt-[160px] px-36 max-md:px-4">
+            <h2 class="lg:text-5xl font-bold text-gray-500 py-8">Test tính cách</h2>
+
+            <!-- option -->
+            <div class="">
+                <h2 class="pt-4 lg:text-3xl lg:font-bold text-gray-700">1. Kiên định, chắc chắn / Sáng tạo, hiếu kỳ</h2>
+                <div class="pl-6 py-4">
+                    <label for="correct_1_1" class="lg:text-lg">
+                        <strong class="px-2">1.1</strong> Bạn dành rất nhiều thời gian rảnh vào việc tìm hiểu về các chủ đề ngẫu nhiên mà thu hút sự chú ý của bạn.
+                    </label>
+                    <div class="flex items-center pl-4">
+                        <input type="radio" name="answer_1_1" class="block text-lg larger-radio" id="correct_1_1">
+                        <label for="correct_1_1" class="text-lg px-4">Đúng</label>
+                    </div>
+                    <div class="flex items-center pl-4">
+                        <input type="radio" name="answer_1_1" class="block text-xl larger-radio" id="wrong_1_1">
+                        <label for="wrong_1_1" class="text-lg px-4">Sai</label>
+                    </div>
+                </div>
+                <div class="pl-6 py-4">
+                    <label for="correct_1_2" class="lg:text-lg">
+                        <strong class="px-2">1.2</strong> Bạn lúc nào cũng bị thu hút bởi những câu hỏi về điều gì, chẳng hạn như, điều gì sẽ xảy ra sau khi ta chết đi.
+                    </label>
+                    <div class="flex items-center pl-4">
+                        <input type="radio" name="answer_1_2" class="block text-lg larger-radio" id="correct_1_2">
+                        <label for="correct_1_2" class="text-lg px-4">Đúng</label>
+                    </div>
+                    <div class="flex items-center pl-4">
+                        <input type="radio" name="answer_1_2" class="block text-xl larger-radio" id="wrong_1_2">
+                        <label for="wrong_1_2" class="text-lg px-4">Sai</label>
+                    </div>
+                </div>
+                <div class="pl-6 py-4">
+                    <label for="correct_1_3" class="lg:text-lg">
+                        <strong class="px-2">1.3</strong> Bạn thường thấy nhàm chán hoặc mất hứng thú khi cuộc thảo luận bắt đầu có tính thuyết giáo.
+                    </label>
+                    <div class="flex items-center pl-4">
+                        <input type="radio" name="answer_1_3" class="block text-lg larger-radio" id="correct_1_3">
+                        <label for="correct_1_3" class="text-lg px-4">Đúng</label>
+                    </div>
+                    <div class="flex items-center pl-4">
+                        <input type="radio" name="answer_1_3" class="block text-xl larger-radio" id="wrong_1_3">
+                        <label for="wrong_1_3" class="text-lg px-4">Sai</label>
+                    </div>
+                </div>
+                <div class="pl-6 py-4">
+                    <label for="correct_1_4" class="lg:text-lg">
+                        <strong class="px-2">1.4</strong> Bạn thường dành nhiều thời gian để cố gắng hiểu những góc nhìn/quan điểm khác với bạn.
+                    </label>
+                    <div class="flex items-center pl-4">
+                        <input type="radio" name="answer_1_4" class="block text-lg larger-radio" id="correct_1_4">
+                        <label for="correct_1_4" class="text-lg px-4">Đúng</label>
+                    </div>
+                    <div class="flex items-center pl-4">
+                        <input type="radio" name="answer_1_4" class="block text-xl larger-radio" id="wrong_1_4">
+                        <label for="wrong_1_4" class="text-lg px-4">Sai</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- options 2 -->
+            <div class="">
+                <h2 class="pt-4 lg:text-3xl lg:font-bold text-gray-700">2. Tự do, phóng khoáng / Hiệu quả, hệ thống</h2>
+                <div class="pl-6 py-4">
+                    <label for="correct_2_1" class="lg:text-lg">
+                        <strong class="px-2">2.1</strong> Bạn thường lên kế hoạch dự phòng cho một kế hoạch dự phòng khác.
+                    </label>
+                    <div class="flex items-center pl-4">
+                        <input type="radio" name="answer_2_1" class="block text-lg larger-radio" id="correct_2_1">
+                        <label for="correct_2_1" class="text-lg px-4">Đúng</label>
+                    </div>
+                    <div class="flex items-center pl-4">
+                        <input type="radio" name="answer_2_1" class="block text-xl larger-radio" id="wrong_2_1">
+                        <label for="wrong_2_1" class="text-lg px-4">Sai</label>
+                    </div>
+                </div>
+                <div class="pl-6 py-4">
+                    <label for="correct_2_2" class="lg:text-lg">
+                        <strong class="px-2">2.2</strong> Bạn thường chỉ làm những gì bạn muốn làm vào bất kỳ thời điểm nào thay vì lập ra một thói quen hằng ngày cụ thể.
+                    </label>
+                    <div class="flex items-center pl-4">
+                        <input type="radio" name="answer_2_2" class="block text-lg larger-radio" id="correct_2_2">
+                        <label for="correct_2_2" class="text-lg px-4">Đúng</label>
+                    </div>
+                    <div class="flex items-center pl-4">
+                        <input type="radio" name="answer_2_2" class="block text-xl larger-radio" id="wrong_2_2">
+                        <label for="wrong_2_2" class="text-lg px-4">Sai</label>
+                    </div>
+                </div>
+                <div class="pl-6 py-4">
+                    <label for="correct_2_3" class="lg:text-lg">
+                        <strong class="px-2">2.3</strong> Bạn nghĩ rằng thế giới sẽ trở thành một nơi tốt đẹp hơn nếu mọi người tập trung vào lẽ phải hơn là cảm xúc của họ
+                    </label>
+                    <div class="flex items-center pl-4">
+                        <input type="radio" name="answer_2_3" class="block text-lg larger-radio" id="correct_2_3">
+                        <label for="correct_2_3" class="text-lg px-4">Đúng</label>
+                    </div>
+                    <div class="flex items-center pl-4">
+                        <input type="radio" name="answer_2_3" class="block text-xl larger-radio" id="wrong_2_3">
+                        <label for="wrong_2_3" class="text-lg px-4">Sai</label>
+                    </div>
+                </div>
+                <div class="pl-6 py-4">
+                    <label for="correct_2_4" class="lg:text-lg">
+                        <strong class="px-2">2.4</strong> Phong cách làm việc của cá nhân bạn giống với nỗ lực bền bỉ, có tổ chức hơn là tùy hứng.
+                    </label>
+                    <div class="flex items-center pl-4">
+                        <input type="radio" name="answer_2_4" class="block text-lg larger-radio" id="correct_2_4">
+                        <label for="correct_2_4" class="text-lg px-4">Đúng</label>
+                    </div>
+                    <div class="flex items-center pl-4">
+                        <input type="radio" name="answer_2_4" class="block text-xl larger-radio" id="wrong_2_4">
+                        <label for="wrong_2_4" class="text-lg px-4">Sai</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- options 3 -->
+            <div class="">
+                <h2 class="pt-4 lg:text-3xl lg:font-bold text-gray-700">3. Đơn độc, kín đáo / Hòa đồng, mạnh mẽ</h2>
+                <div class="pl-6 py-4">
+                    <label for="correct_3_1" class="lg:text-lg">
+                        <strong class="px-2">3.1</strong> Bạn thường xuyên kết bạn mới.
+                    </label>
+                    <div class="flex items-center pl-4">
+                        <input type="radio" name="answer_3_1" class="block text-lg larger-radio" id="correct_3_1">
+                        <label for="correct_3_1" class="text-lg px-4">Đúng</label>
+                    </div>
+                    <div class="flex items-center pl-4">
+                        <input type="radio" name="answer_3_1" class="block text-xl larger-radio" id="wrong_3_1">
+                        <label for="wrong_3_1" class="text-lg px-4">Sai</label>
+                    </div>
+                </div>
+                <div class="pl-6 py-4">
+                    <label for="correct_3_2" class="lg:text-lg">
+                        <strong class="px-2">3.2</strong> Bạn cảm thấy khá thoải mái khi tiến tới và bắt chuyện với một ai đó mà bạn cho là thú vị.
+                    </label>
+                    <div class="flex items-center pl-4">
+                        <input type="radio" name="answer_3_2" class="block text-lg larger-radio" id="correct_3_2">
+                        <label for="correct_3_2" class="text-lg px-4">Đúng</label>
+                    </div>
+                    <div class="flex items-center pl-4">
+                        <input type="radio" name="answer_3_2" class="block text-xl larger-radio" id="wrong_3_2">
+                        <label for="wrong_3_2" class="text-lg px-4">Sai</label>
+                    </div>
+                </div>
+                <div class="pl-6 py-4">
+                    <label for="correct_3_3" class="lg:text-lg">
+                        <strong class="px-2">3.3</strong> Bạn thích tham gia các hoạt động nhóm.
+                    </label>
+                    <div class="flex items-center pl-4">
+                        <input type="radio" name="answer_3_3" class="block text-lg larger-radio" id="correct_3_3">
+                        <label for="correct_3_3" class="text-lg px-4">Đúng</label>
+                    </div>
+                    <div class="flex items-center pl-4">
+                        <input type="radio" name="answer_3_3" class="block text-xl larger-radio" id="wrong_3_3">
+                        <label for="wrong_3_3" class="text-lg px-4">Sai</label>
+                    </div>
+                </div>
+                <div class="pl-6 py-4">
+                    <label for="correct_3_4" class="lg:text-lg">
+                        <strong class="px-2">3.4</strong> Sau một tuần dài và mệt mỏi, những gì bạn cần chính là một bữa tiệc sôi động.
+                    </label>
+                    <div class="flex items-center pl-4">
+                        <input type="radio" name="answer_3_4" class="block text-lg larger-radio" id="correct_3_4">
+                        <label for="correct_3_4" class="text-lg px-4">Đúng</label>
+                    </div>
+                    <div class="flex items-center pl-4">
+                        <input type="radio" name="answer_3_4" class="block text-xl larger-radio" id="wrong_3_4">
+                        <label for="wrong_3_4" class="text-lg px-4">Sai</label>
+                    </div>
+                </div>
+                <div class="pl-6 py-4">
+                    <label for="correct_3_5" class="lg:text-lg">
+                        <strong class="px-2">3.5</strong> Bạn bị thu hút bởi những nơi có không khí nhộn nhịp, tấp nập hơn là những nơi yên ắng, kín đáo.
+                    </label>
+                    <div class="flex items-center pl-4">
+                        <input type="radio" name="answer_3_5" class="block text-lg larger-radio" id="correct_3_5">
+                        <label for="correct_3_5" class="text-lg px-4">Đúng</label>
+                    </div>
+                    <div class="flex items-center pl-4">
+                        <input type="radio" name="answer_3_5" class="block text-xl larger-radio" id="wrong_3_5">
+                        <label for="wrong_3_5" class="text-lg px-4">Sai</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- options 4 -->
+            <div class="">
+            <h2 class="pt-4 lg:text-3xl lg:font-bold text-gray-700">4. Vững chắc, tự tin / Nhạy cảm, hoảng sợ</h2>
+            <div class="pl-6 py-4">
+                <label for="wrong_4_1" class="lg:text-lg">
+                    <strong class="px-2">4.1</strong> Nhìn thấy người khác khóc dễ khiến bạn muốn khóc theo
+                </label>
+                <div class="flex items-center pl-4">
+                    <input type="radio" name="answer_4_1" class="block text-lg larger-radio" id="wrong_4_1">
+                    <label for="wrong_4_1" class="text-lg px-4">Đúng</label>
+                </div>
+                <div class="flex items-center pl-4">
+                    <input type="radio" name="answer_4_1" class="block text-xl larger-radio" id="wrong_4_1_2">
+                    <label for="wrong_4_1_2" class="text-lg px-4">Sai</label>
+                </div>
+            </div>
+            <div class="pl-6 py-4">
+                <label for="wrong_4_2" class="lg:text-lg">
+                    <strong class="px-2">4.2</strong> Bạn có xu hướng lo lắng rằng mọi thứ sẽ trở nên tồi tệ hơn
+                </label>
+                <div class="flex items-center pl-4">
+                    <input type="radio" name="answer_4_2" class="block text-lg larger-radio" id="wrong_4_2">
+                    <label for="wrong_4_2" class="text-lg px-4">Đúng</label>
+                </div>
+                <div class="flex items-center pl-4">
+                    <input type="radio" name="answer_4_2" class="block text-xl larger-radio" id="wrong_4_2_2">
+                    <label for="wrong_4_2_2" class="text-lg px-4">Sai</label>
+                </div>
+            </div>
+            <div class="pl-6 py-4">
+                <label for="wrong_4_3" class="lg:text-lg">
+                    <strong class="px-2">4.3</strong> Bạn dễ đồng cảm với những người có trải nghiệm khác với mình.
+                </label>
+                <div class="flex items-center pl-4">
+                    <input type="radio" name="answer_4_3" class="block text-lg larger-radio" id="wrong_4_3">
+                    <label for="wrong_4_3" class="text-lg px-4">Đúng</label>
+                </div>
+                <div class="flex items-center pl-4">
+                    <input type="radio" name="answer_4_3" class="block text-xl larger-radio" id="wrong_4_3_2">
+                    <label for="wrong_4_3_2" class="text-lg px-4">Sai</label>
+                </div>
+            </div>
+            <div class="pl-6 py-4">
+                <label for="wrong_4_4" class="lg:text-lg">
+                    <strong class="px-2">4.4</strong> Bạn hay mất bình tĩnh và luôn cảm thấy áp lực.
+                </label>
+                <div class="flex items-center pl-4">
+                    <input type="radio" name="answer_4_4" class="block text-lg larger-radio" id="wrong_4_4">
+                    <label for="wrong_4_4" class="text-lg px-4">Đúng</label>
+                </div>
+                <div class="flex items-center pl-4">
+                    <input type="radio" name="answer_4_4" class="block text-xl larger-radio" id="wrong_4_4_2">
+                    <label for="wrong_4_4_2" class="text-lg px-4">Sai</label>
+                </div>
+            </div>
+            <div class="pl-6 py-4">
+                <label for="wrong_4_5" class="lg:text-lg">
+                    <strong class="px-2">4.5</strong> Bạn thường hay day dứt về những lỗi lầm mà bạn mắc phải đã từ rất lâu rồi.
+                </label>
+                <div class="flex items-center pl-4">
+                    <input type="radio" name="answer_4_5" class="block text-lg larger-radio" id="wrong_4_5">
+                    <label for="wrong_4_5" class="text-lg px-4">Đúng</label>
+                </div>
+                <div class="flex items-center pl-4">
+                    <input type="radio" name="answer_4_5" class="block text-xl larger-radio" id="wrong_4_5_2">
+                    <label for="wrong_4_5_2" class="text-lg px-4">Sai</label>
+                </div>
+            </div>
+        </div>
+
+            <button class="rounded-full bg-red-600 lg:px-40 max-md:w-full max-md:mt-10 text-lg py-2 text-white hover:bg-red-500">Gửi</button>
+            </div>
+            </div>
+        <!-- message -->
+    <button class="fixed bottom-2 right-3 rounded-full bg-red-500 text-white font-bold  px-7 py-2 text-2xl" onclick="handleShowMess()">
+        Let`s Chat!
+    </button>
+    <div class="hidden fixed bottom-2 right-3 border border-gray-50 bg-white  rounded-xl  shadow-xl p-2">
+        <div class="flex items-center  p-2  border-b border-gray-100">
+            <img src="./imgs//icons/header-icon.png" class="rouned-full w-16 h-14 px-2" alt="">
+            <div class="">
+                <p class="py-1 font-bold text-red-600">Heartlink</p>
+                <p class="text-sm text-red-500">We’ll reply as soon as we can</p>
+            </div>
+            <button onclick="handleClose()" class=" text-xl px-5">X</button>
+        </div>
+        <div class="overflow-y-scroll h-80">
+
+        </div>
+        <div class="w-full flex items-center">
+            <input type="text" class="w-full px-2 py-1 outline-none" placeholder="write your message....">
+            <svg class="mt-2 mr-4" viewBox="0 0 20 20" fill="currentColor" width="24px" height="16px"><path d="M10,0a10,10,0,1,0,9.85,8.26A10,10,0,0,0,10,0Zm0,19A9,9,0,1,1,18.87,8.44,9.11,9.11,0,0,1,19,10,9,9,0,0,1,10,19Zm4.23-6.88a4.5,4.5,0,0,1-8.72,0l1-.25a3.5,3.5,0,0,0,6.78,0ZM8,8A1,1,0,1,1,7,7,1,1,0,0,1,8,8Zm6,0a1,1,0,1,1-1-1A1,1,0,0,1,14,8Z"></path></svg>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer class="w-full mt-6  text-white bg-[#EF0D4A] px-20 border-t border-white shadow-lg">
+        <p class=" text-2xl mb-2 font-bold pt-10">
+            HeartLink
+        </p>
+        <div class="">
+            <div class="flex items-center max-md:flex-col justify-between">
+                <p class="text-white ">
+            123-456-7890
+            <span class="block leading-5">
+                heartlinkxinchao@gmail.com
+            </span>
+            </p>
+            <p>
+            279 Nguyễn Tri Phương, Phường 5, Quận 10, TPHCM
+            </p>
+
+            </div>
+            <div class="flex items-center">
+                <img src="./imgs//icons/facebook.png" class="px-2  text-white py-2" alt="">
+                <img src="./imgs//icons/ista.png" class="px-2  text-white py-2" alt="">
+                <img src="./imgs//icons/youtube.png" class="px-2  text-white py-2" alt="">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

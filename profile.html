@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo hồ sơ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./fontawesome-free-6.5.2-web/css/all.min.css">
+</head>
+<body>
+     <!-- header -->
+     <header class="fixed top-0 left-0  right-0 z-20">
+           <div class="h-20 bg-[#EF0D4A] px-20 border-b border-white">
+            <a href="/home.html" class="flex items-center text-white  h-full">
+            <img src="./imgs//icons/header-icon.png " class="pt-1 h-full" alt="icon">
+            <p class="text-4xl font-bold">
+                Heartlink</p>
+           </a>   
+           </div>
+           <div class="bg-red-500 px-6 py-6 text-white flex items-center">
+            <ul class=" bg-slate-100 text-gray-600  rounded-full list-none max-md:px-1 flex items-center max-md:overflow-x-scroll whitespace-norwap" id="route_link">
+                <a href="/home.html" class="px-2 py-1 font-bold text-base whitespace-nowrap">Trang chủ</a>
+                <a href="/personalityTest.html" class="px-4 py-1 font-bold text-base whitespace-nowrap">Test tính cách</a>
+                <a href="/profile.html" class="px-4 py-1 font-bold text-base whitespace-nowrap">Tạo hồ sơ</a>
+                <a href="/authentication.html" class="px-4 py-1 font-bold text-base whitespace-nowrap">Xác thực hồ sơ</a>
+                <a href="/feedback.html" class="px-4 py-1 font-bold text-base whitespace-nowrap">Phản hồi từ khách hàng</a>
+                <a href="/login.html" class="px-4 py-1 font-bold text-base whitespace-nowrap hidden max-md:block">Đăng nhập</a>
+                <a href="/register.html" class="px-4 py-1 font-bold text-base whitespace-nowrap hidden max-md:block">Đăng kí</a>
+            </ul>
+            <a class="ml-auto px-4 text-lg font-bold text white block max-md:hidden" href="./register.html">
+                Đăng kí</a>
+
+                 <a class="px-4 text-lg font-bold text white block max-md:hidden" href="/login.html">
+                Đăng nhập</a>
+           </div>
+
+    </header>
+        <!-- body -->
+        <div class="mt-[160px] px-20 bg-[#DDE7FE] flex items-center justify-center">
+            <div class="lg:w-[980px] py-10 bg-[#EFEFF4] px-4 text-[#B0B1BA]">
+                <h2 class="flex text-black lg:p-2 justify-center mt-6  mb-4 text-4xl font-semibold">
+                    Tạo lập hồ sơ
+                </h2>
+                <!-- row 1 -->
+                <div class="w-full flex items-center max-md:flex-col">
+                    <div class="lg:w-1/3 max-md:w-full p-4">
+                        <label for="username" class="text-[13px] whitespace-nowrap text-gray-700 py-1">Họ và tên *</label>
+                        <input required type="text"  class="w-full text-black lg:p-2 focus:bg-white py-1 text-sm outline-none bg-transparent focus:border-red-500  border-b border-gray-400 ">
+                    </div>
+                    <div class="lg:w-1/3 max-md:w-full ">
+                        <label for="birthday" class="text-[13px] whitespace-nowrap text-gray-700 py-1">Ngày sinh*</label>
+                        <div class="flex items-center">
+        <div class="text-black lg:p-2 pr-2">
+            <select id="day1">
+                
+            </select>
+        </div>
+        <div class="px-2 text-black lg:p-2">
+            <select id="month">
+                <option value="" disabled selected>Month</option>
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+            </select>
+        </div>
+        <div class="text-black lg:p-2 px-2">
+            <select id="year">
+                <option value="" disabled selected>Year</option>
+            </select>
+        </div>
+                        </div>
+        </div>
+        <!-- row 3 -->
+                    <div class="lg:w-1/3 max-md:w-full p-2 ">
+                        <label for="sex" class="text-[13px] whitespace-nowrap text-gray-700 py-1">Giới tính *</label>
+                        <select name="" id="" class="text-black lg:p-2 px-4 w-full">
+                            <option value="men">Nam</option>
+                            <option value="women">nữ</option>
+                            <option value="else">Khác</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- col 2 -->
+        <div class="flex items-center my-3 w-full">
+            <div class="lg:w-[62%] p-4">
+                <label for="username" class="text-[13px] whitespace-nowrap text-gray-700 py-1">Địa chỉ *</label>
+                <input required type="text"  class="w-full text-black lg:p-2 focus:bg-white py-1 text-sm outline-none bg-transparent focus:border-red-500  border-b border-gray-400 ">
+            </div>
+            <div class="lg:w-[33%] p-4 lg:ml-10">
+                        <label for="targetmarry" class="text-[13px] whitespace-nowrap   text-gray-700 py-1">Mục tiêu thời gian kết hôn *</label>
+                        <select name="" id="" class="text-black lg:p-2 px-2 w-full">
+                            <option value="1">Dưới 1 năm</option>
+                            <option value="2">Từ 1 đến 2 năm</option>
+                            <option value="3">2 đến 3 năm</option>
+                            <option value="4">trên 3 năm</option>
+                        </select>
+                </div>
+        </div> 
+        <!-- col3 -->
+        <div class="flex items-center">
+            <div class="lg:w-1/3 max-md:w-full p-4">
+                <label for="username" class="text-[13px] whitespace-nowrap text-gray-700 py-1">Chiều cao*</label>
+                <input required type="text" placeholder="cm"  class="text-black lg:p-2 w-full bg-white focus:bg-white py-1 text-sm outline-none bg-transparent focus:border-red-500  border-b border-gray-400 ">
+            </div>
+            <div class="lg:w-1/3 max-md:w-full p-4">
+                <label for="username" class="text-[13px] whitespace-nowrap text-gray-700 py-1">Cân nặng *</label>
+                <input required type="text" placeholder="kg" class="text-black lg:p-2 w-full bg-white focus:bg-white py-1 text-sm outline-none bg-transparent focus:border-red-500  border-b border-gray-400 ">
+            </div>
+            <div class="lg:w-1/3 max-md:w-full p-4">
+                <label for="username" class="text-[13px] whitespace-nowrap text-gray-700 py-1">Nghề nghiệp *</label>
+                <input required type="text"  class="text-black lg:p-2 w-full bg-white focus:bg-white py-1 text-sm outline-none bg-transparent focus:border-red-500  border-b border-gray-400 ">
+            </div>
+            
+        </div>
+        <!-- col 4 -->
+        <div class="flex items-center max-md:flex-col">
+             <div class="lg:w-1/3 max-md:w-full p-4">
+                <label for="username" class="text-[13px] whitespace-nowrap text-gray-700 py-1">Lương*</label>
+                <input required type="text" placeholder="Triệu VND..."  class=" pl-1 text-black lg:p-2 w-full bg-white focus:bg-white py-1 text-sm outline-none bg-transparent focus:border-red-500  border-b border-gray-400 ">
+            </div>
+             <div class="lg:w-1/3 max-md:w-full p-4">
+                <label for="username" class="leading-3 text-[13px] mb-2 whitespace-nowrap text-gray-700 py-1">Đính kèm CCCD, số bảo hiểm y tế và <p class="leading-1 mb-2">
+                    bảng lương hoặc cung cấp mã số thuế
+                </p></label>
+                <input required type="file" placeholder="Tải tệp lên..."  class="text-black lg:p-2 w-full bg-white focus:bg-white py-1 text-sm outline-none bg-transparent focus:border-red-500  border-b border-gray-400 ">
+                <p class="text-sm text-black lg:p-2 py-2">Tải tệp được hỗ trợ lên (Tối đa 15MB)
+
+</p>
+            </div>
+        </div>
+        <button class="bg-black text-white px-10 hover:bg-blue-700 flex justify-center mx-auto mb-4 hover:text-white py-2 rounded-lg">Đăng kí</button>
+        <p class="font-bold text-[13px] leading-7 text-black lg:p-2">
+            - Tôi đã đọc và hiểu rõ, đồng thời đồng ý tuân thủ theo các Quy định liên quan đến hoạt động của dịch vụ mai mối kết hôn của Heartlink. <br>
+
+- Mọi thông tin, hồ sơ tôi đã kê khai và cung cấp khi đăng ký, bao gồm nhưng không giới hạn các thông tin cá nhân, ảnh và giấy tờ tùy thân của tôi, là chính xác và tuân thủ các quy định của Heartlink. <br>
+
+- Tôi đã đọc và hiểu rõ Chính sách bảo mật thông tin khách hàng. Tôi đồng ý cho phép Heartlink sử dụng thông tin cá nhân để phục vụ cho các mục đích nằm trong chính sách này. <br>
+
+
+- Trường hợp tôi vi phạm bất kỳ cam kết nào ở trên, tôi chấp nhận chịu mọi hình thức xử lý theo đúng quy định của Heartlink và pháp luật. <br>
+        </p>
+            </div>
+
+        </div>
+
+
+
+        <!-- message -->
+    <button class="fixed bottom-2 right-3 rounded-full bg-red-500 text-white font-bold  px-7 py-2 text-2xl" onclick="handleShowMess()">
+        Let`s Chat!
+    </button>
+    <div class="hidden fixed bottom-2 right-3 border border-gray-50 bg-white  rounded-xl  shadow-xl p-2">
+        <div class="flex items-center  p-2  border-b border-gray-100">
+            <img src="./imgs//icons/header-icon.png" class="rouned-full w-16 h-14 px-2" alt="">
+            <div class="">
+                <p class="py-1 font-bold text-red-600">Heartlink</p>
+                <p class="text-sm text-red-500">We’ll reply as soon as we can</p>
+            </div>
+            <button onclick="handleClose()" class=" text-xl px-5">X</button>
+        </div>
+        <div class="overflow-y-scroll h-80">
+
+        </div>
+        <div class="w-full flex items-center max-md:flex-col">
+            <input required type="text" class="w-full px-2 py-1 outline-none" placeholder="write your message....">
+            <svg class="mt-2 mr-4" viewBox="0 0 20 20" fill="currentColor" width="24px" height="16px"><path d="M10,0a10,10,0,1,0,9.85,8.26A10,10,0,0,0,10,0Zm0,19A9,9,0,1,1,18.87,8.44,9.11,9.11,0,0,1,19,10,9,9,0,0,1,10,19Zm4.23-6.88a4.5,4.5,0,0,1-8.72,0l1-.25a3.5,3.5,0,0,0,6.78,0ZM8,8A1,1,0,1,1,7,7,1,1,0,0,1,8,8Zm6,0a1,1,0,1,1-1-1A1,1,0,0,1,14,8Z"></path></svg>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- footer -->
+    <footer class="w-full mt-6  text-white bg-[#EF0D4A] px-20 border-t border-white shadow-lg">
+        <p class=" text-2xl mb-2 font-bold pt-10">
+            HeartLink
+        </p>
+        <div class="">
+            <div class="flex items-center max-md:flex-col justify-between">
+                <p class="text-white ">
+            123-456-7890
+            <span class="block leading-5">
+                heartlinkxinchao@gmail.com
+            </span>
+            </p>
+            <p>
+            279 Nguyễn Tri Phương, Phường 5, Quận 10, TPHCM
+            </p>
+
+            </div>
+            <div class="flex items-center">
+                <img src="./imgs//icons/facebook.png" class="px-2  text-white py-2" alt="">
+                <img src="./imgs//icons/ista.png" class="px-2  text-white py-2" alt="">
+                <img src="./imgs//icons/youtube.png" class="px-2  text-white py-2" alt="">
+            </div>
+        </div>
+    </footer>
+</body>
+ <script>
+        // Function to populate days dropdown based on selected month and year
+        function populateDays() {
+            var dayDropdown = document.getElementById("day1");
+            // Get the number of days in the selected month and year
+            // Populate day dropdown with options from 1 to the number of days in the month
+            for (let day = 1; day <= 31; day++) {
+                var option = document.createElement("option");
+                option.text = day;
+                option.value = day;
+                dayDropdown.appendChild(option);
+            }
+        }
+
+        // Function to populate years dropdown from current year to 100 years ago
+        function populateYears() {
+            var yearDropdown = document.getElementById("year");
+            var currentYear = new Date().getFullYear();
+
+            // Clear existing options
+            yearDropdown.innerHTML = "<option value='' disabled selected>Year</option>";
+
+            // Populate year dropdown with options from current year to 100 years ago
+            for (var year = currentYear; year >= currentYear - 100; year--) {
+                var option = document.createElement("option");
+                option.text = year;
+                option.value = year;
+                yearDropdown.appendChild(option);
+            }
+        }
+        populateDays()
+        // Add event listeners to month and year dropdowns
+        document.getElementById("month").addEventListener("change", populateDays);
+        document.getElementById("year").addEventListener("change", populateDays);
+
+        // Initialize year dropdown on page load
+        populateYears();
+    </script>
+</html>

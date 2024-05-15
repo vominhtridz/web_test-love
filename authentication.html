@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo hồ sơ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./fontawesome-free-6.5.2-web/css/all.min.css">
+</head>
+<body>
+     <!-- header -->
+     <header class="fixed top-0 left-0  right-0 z-20">
+           <div class="h-20 bg-[#EF0D4A] px-20 border-b border-white">
+            <a href="/home.html" class="flex items-center text-white  h-full">
+            <img src="./imgs//icons/header-icon.png " class="pt-1 h-full" alt="icon">
+            <p class="text-4xl font-bold">
+                Heartlink</p>
+           </a>   
+           </div>
+           <div class="bg-red-500 px-6 py-6 text-white flex items-center">
+            <ul class=" bg-slate-100 text-gray-600  rounded-full list-none max-md:px-1 flex items-center max-md:overflow-x-scroll whitespace-norwap" id="route_link">
+                <a href="/home.html" class="px-2 py-1 font-bold text-base whitespace-nowrap">Trang chủ</a>
+                <a href="/personalityTest.html" class="px-4 py-1 font-bold text-base whitespace-nowrap">Test tính cách</a>
+                <a href="/profile.html" class="px-4 py-1 font-bold text-base whitespace-nowrap">Tạo hồ sơ</a>
+                <a href="/authentication.html" class="px-4 py-1 font-bold text-base whitespace-nowrap">Xác thực hồ sơ</a>
+                <a href="/feedback.html" class="px-4 py-1 font-bold text-base whitespace-nowrap">Phản hồi từ khách hàng</a>
+                <a href="/login.html" class="px-4 py-1 font-bold text-base whitespace-nowrap hidden max-md:block">Đăng nhập</a>
+                <a href="/register.html" class="px-4 py-1 font-bold text-base whitespace-nowrap hidden max-md:block">Đăng kí</a>
+            </ul>
+            <a class="ml-auto px-4 text-lg font-bold text white block max-md:hidden" href="./register.html">
+                Đăng kí</a>
+
+                 <a class="px-4 text-lg font-bold text white block max-md:hidden" href="/login.html">
+                Đăng nhập</a>
+           </div>
+
+    </header>
+        <!-- body -->
+        <div class="mt-[160px] px-16 bg-[#DDE7FE] flex items-center  justify-center">
+            <div class="lg:w-[1250px] py-10 bg-[#EFEFF4] px-4 text-[#B0B1BA]">
+                <h2 class="flex text-black justify-center mt-6  mb-4 text-4xl font-semibold">
+                    Xác thực hồ sơ
+                </h2>
+                <div class="flex  max-md:flex-col">
+                    <div class="lg:w-1/3 max-md:w-full p-4 max-md:p-2">
+                    <label for="username" class="font-semibold leading-3 text-[13px] mb-2 whitespace-nowrap text-gray-700 py-1"> <p class="leading-1 mb-2">
+                        Cung cấp hình ảnh (chính diện, <br> sau lưng, góc ngang, toàn <br> thân)*
+                    </p></label>
+                    <input required type="file" placeholder="Tải tệp lên..."  class="text-black w-full bg-white focus:bg-white py-1 text-sm outline-none bg-transparent focus:border-red-500  border-b border-gray-400 ">
+                    <p class="text-[12px] text-black leading-3  py-2">Tải tệp được hỗ trợ lên (Tối đa 15MB)</p>
+                    <p class="text-black text-[11.5px] leading-3 my-2">
+                        Lưu ý*: Vui lòng tuân thủ các yêu cầu tiêu chuẩn về ảnh
+                        <a href="https://docs.google.com/document/d/1EQ54XqKbVNMY4ilRnB52jFKE3Z4KJG2Gb_GVHCzjKbU/edit" target="_blank" class="text-[13px] hover:underline text-blue-600 text-black">tại đây</a>
+                    </p>
+                    </div>
+                    <div class="lg:w-1/3 max-md:w-full p-4 max-md:p-2">
+                    <label for="username" class="font-semibold leading-3 text-[13px] mb-2 whitespace-nowrap text-gray-700 py-1">Đính kèm CCCD, số bảo hiểm y tế và <p class="leading-1 mb-2">
+                       Học vấn: Đính kèm bằng cấp, các chứng chỉ liên quan *
+                    </p></label>
+                    <input required type="file" placeholder="Tải tệp lên..."  class="text-black w-full bg-white focus:bg-white py-1 text-sm outline-none bg-transparent focus:border-red-500  border-b border-gray-400 ">
+                    <p class="text-[12px] text-black leading-3  py-2">Tải tệp được hỗ trợ lên (Tối đa 15MB)</p>
+                    </div>
+                    <!-- row 3 -->
+                        <div class="lg:w-1/3 max-md:w-full p-8 max-md:p-2">
+                    <label for="username" class="text-[15px] whitespace-nowrap font-semibold text-gray-700   py-1">Kinh nghiệm làm việc :</label>
+                    <input required type="text" placeholder="Công ty..."  class="mt-2 pl-1 text-black w-full bg-white focus:bg-white py-1 text-sm outline-none bg-transparent focus:border-red-500  border-b border-gray-400 ">
+                </div>
+            </div>
+            <!-- col2 -->
+            <div class="flex items-center max-md:flex-col">
+                <div class="lg:w-1/3 max-md:w-full p-4 max-md:p-2 overflow-hidden">
+                <label for="username" class="leading-3 font-semibold w-full whitespace-wrap text-[13px]  block whitespace-nowrap text-gray-700 py-1"> <p class="leading-1 mb-2">
+                    Giấy khám sức khỏe trước hôn nhân <br> (cho các người sử dụng  <br> có mục tiêu kết hôn trong 1 năm)
+                </p></label>
+                <input required type="file" placeholder="Tải tệp lên..."  class="text-black w-full bg-white focus:bg-white py-1 text-sm outline-none bg-transparent focus:border-red-500  border-b border-gray-400 ">
+                <p class="text-[12px] text-black leading-3  py-2">Tải tệp được hỗ trợ lên (Tối đa 15MB)</p>
+                
+                </div>
+                <!--  row 2 -->
+                <div class="lg:w-1/3 max-md:w-full p-4 overflow-hidden">
+                <label for="username" class="leading-3 font-semibold w-full whitespace-wrap text-[13px]  block whitespace-nowrap text-gray-700 py-1"> <p class="leading-1 mb-2">
+                    Sở thích
+                </p></label>
+                <textarea required placeholder="Những sở thích và hoạt động ngoài công việc..." class="text-black font-semibold h-36 text-black w-full bg-white focus:bg-white py-1 text-sm outline-none bg-transparent focus:border-red-500 border-b p-2 border-gray-400"></textarea>
+
+                </div>
+                <div class="lg:w-1/3 max-md:w-full p-4 overflow-hidden">
+                <label for="username" class=" leading-3 font-semibold w-full whitespace-wrap text-[13px]  block whitespace-nowrap text-gray-700 py-1"> <p class="leading-1 mb-2">
+                    Thời gian làm việc
+                </p></label>
+                <input required type="number" placeholder="Tháng"  class="text-black w-full bg-white focus:bg-white py-1 text-sm outline-none bg-transparent focus:border-red-500  border-b border-gray-400 ">                
+                </div>
+
+            </div>
+            <!--  col 3 -->
+            <div class="flex max-md max-md:flex-col">
+                <div class="w-1/3 p-4 max-md:w-full  max-md:order-3">
+                    <div class="flex items-center">
+                        <input type="checkbox"  required class="w-6 h-6 mr-4">
+                    <p class=" text-gray-700 leading-4 text-[13px]">
+                        tôi đồng ý với điều khoản <br> và điều kiện
+                        <a class="font-semibold underline" href="https://docs.google.com/document/d/1CyVTMNleH3JM8lcUEgWz8wQe5RSAhU_sOyoSNKPrcuw/edit" target="_blank">Xem điều khoản điều kiện sử dụng</a>
+                    </p>
+                    </div>
+                <button class="w-full py-2 rounded-lg bg-black text-white  my-2">Xác thực</button>
+                </div>
+                <div class="lg:w-1/3 max-md:w-full p-4 overflow-hidden">
+                <label for="username" class="leading-3 font-semibold w-full whitespace-wrap text-[15px]  block whitespace-nowrap text-gray-700 py-1"> <p class="leading-1 mb-2">
+                    Sở Trường
+                </p></label>
+                <textarea required placeholder="Nếu có hảy liệt kê những kỹ năng và lình vực ban đặc biệt mạnh..." class="text-black font-semibold h-36 text-black w-full bg-white focus:bg-white py-1 text-sm outline-none bg-transparent focus:border-red-500 border-b p-2 border-gray-400"></textarea>
+
+                </div>
+                <div class="lg:w-1/3 max-md:w-full p-4 overflow-hidden">
+                <label for="username" class="leading-3 font-semibold w-full whitespace-wrap text-[15px]  block whitespace-nowrap text-gray-700 py-1"> <p class="leading-1 mb-2">
+                    Mô tả công việc
+                </p></label>
+                <textarea required placeholder="Mô tả ngắn về nhiệm vụ và trách nhiệm của bạn tại công ty/ tổ chức..." class="text-black font-semibold h-36 text-black w-full bg-white focus:bg-white py-1 text-sm outline-none bg-transparent focus:border-red-500 border-b p-2 border-gray-400"></textarea>
+
+                </div>
+
+            </div>
+            </div>
+        </div>
+        <!-- message -->
+    <button class="fixed bottom-2 right-3 rounded-full bg-red-500 text-white font-bold  px-7 py-2 text-2xl" onclick="handleShowMess()">
+        Let`s Chat!
+    </button>
+    <div class="hidden fixed bottom-2 right-3 border border-gray-50 bg-white  rounded-xl  shadow-xl p-2">
+        <div class="flex items-center  p-2  border-b border-gray-100">
+            <img src="./imgs//icons/header-icon.png" class="rouned-full w-16 h-14 px-2" alt="">
+            <div class="">
+                <p class="py-1 font-bold text-red-600">Heartlink</p>
+                <p class="text-sm text-red-500">We’ll reply as soon as we can</p>
+            </div>
+            <button onclick="handleClose()" class=" text-xl px-5">X</button>
+        </div>
+        <div class="overflow-y-scroll h-80">
+
+        </div>
+        <div class="w-full flex items-center">
+            <input type="text" class="w-full px-2 py-1 outline-none" placeholder="write your message....">
+            <svg class="mt-2 mr-4" viewBox="0 0 20 20" fill="currentColor" width="24px" height="16px"><path d="M10,0a10,10,0,1,0,9.85,8.26A10,10,0,0,0,10,0Zm0,19A9,9,0,1,1,18.87,8.44,9.11,9.11,0,0,1,19,10,9,9,0,0,1,10,19Zm4.23-6.88a4.5,4.5,0,0,1-8.72,0l1-.25a3.5,3.5,0,0,0,6.78,0ZM8,8A1,1,0,1,1,7,7,1,1,0,0,1,8,8Zm6,0a1,1,0,1,1-1-1A1,1,0,0,1,14,8Z"></path></svg>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer class="w-full mt-6  text-white bg-[#EF0D4A] px-20 border-t border-white shadow-lg">
+        <p class=" text-2xl mb-2 font-bold pt-10">
+            HeartLink
+        </p>
+        <div class="">
+            <div class="flex items-center justify-between">
+                <p class="text-white ">
+            123-456-7890
+            <span class="block leading-5">
+                heartlinkxinchao@gmail.com
+            </span>
+            </p>
+            <p>
+            279 Nguyễn Tri Phương, Phường 5, Quận 10, TPHCM
+            </p>
+
+            </div>
+            <div class="flex items-center">
+                <img src="./imgs//icons/facebook.png" class="px-2  text-white py-2" alt="">
+                <img src="./imgs//icons/ista.png" class="px-2  text-white py-2" alt="">
+                <img src="./imgs//icons/youtube.png" class="px-2  text-white py-2" alt="">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
