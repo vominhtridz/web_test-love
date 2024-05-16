@@ -30,13 +30,13 @@
            </div>
            <div class="bg-red-500 px-6 py-2 text-white flex items-center">
             <ul class=" bg-slate-100 text-gray-600  rounded-full list-none max-md:px-1 flex items-center max-md:overflow-x-scroll whitespace-norwap" id="route_link">
-                <a href="/home.html" class="px-2 py-1 font-bold text-base whitespace-nowrap">Trang chủ</a>
-                <a href="/personalityTest.html" class="px-4 py-1 font-bold text-base whitespace-nowrap">Test tính cách</a>
-                <a href="/profile.html" class="px-4 py-1 font-bold text-base whitespace-nowrap">Tạo hồ sơ</a>
-                <a href="/authentication.html" class="px-4 py-1 font-bold text-base whitespace-nowrap">Xác thực hồ sơ</a>
-                <a href="/feedback.html" class="px-4 py-1 font-bold text-base whitespace-nowrap">Phản hồi từ khách hàng</a>
-                <a href="/login.html" class="px-4 py-1 font-bold text-base whitespace-nowrap hidden max-md:block">Đăng nhập</a>
-                <a href="/register.html" class="px-4 py-1 font-bold text-base whitespace-nowrap hidden max-md:block">Đăng kí</a>
+                <a href="/home.html" class="px-2 py-1 font-bold text-sm whitespace-nowrap">Trang chủ</a>
+                <a href="/personalityTest.html" class="px-4 py-1 font-bold text-sm whitespace-nowrap">Test tính cách</a>
+                <a href="/profile.html" class="px-4 py-1 font-bold text-sm whitespace-nowrap">Tạo hồ sơ</a>
+                <a href="/authentication.html" class="px-4 py-1 font-bold text-sm whitespace-nowrap">Xác thực hồ sơ</a>
+                <a href="/feedback.html" class="px-4 py-1 font-bold text-sm whitespace-nowrap">Phản hồi từ khách hàng</a>
+                <a href="/login.html" class="px-4 py-1 font-bold text-sm whitespace-nowrap hidden max-md:block">Đăng nhập</a>
+                <a href="/register.html" class="px-4 py-1 font-bold text-sm whitespace-nowrap hidden max-md:block">Đăng kí</a>
             </ul>
             <a class="ml-auto px-4 text-lg font-bold text white block max-md:hidden" id="register" href="./register.html">
                 Đăng kí</a>
@@ -56,8 +56,13 @@
 
     </header>
         <!-- body -->
-        <form class="mt-[160px] px-36 max-md:px-4 lg:min-h-[30rem]" id="myForm">
-            <h2 id="title_test" class="lg:text-5xl font-bold text-gray-500 py-8">Test tính cách</h2>
+        <form class="mt-[160px] px-36 max-md:px-4 min-h-[30rem]" id="myForm">
+            <h2 id="title_test" class="lg:text-6xl max-md:text-3xl max-md:py-2 font-bold text-gray-500 py-6">Test tính cách</h2>
+            <p id="content" class="text-left text-sm text-gray-800 py-6 max-md:py-2">
+                Chào bạn, mời bạn cùng Heartlink bắt đầu hành trình khám phá tính cách, mong muốn và ngôn ngữ tình yêu của bạn thân mình nhé (bộ câu hỏi được Heartlink xây dựng cùng Chuyên gia tâm lý Tình yêu - Hôn nhân Lê Thị Hoa (Phó giáo sư, Tiến sĩ) giúp chúng tôi xác định chính xác con người bạn cũng như đối tượng hẹn hò phù hợp nhất giành cho bạn:
+Để Hearlink tìm hiểu về tính cách bạn: 
+
+            </p>
             <!-- option -->
             <div class="option_select" id="option_0"></div>
             <div class="option_select" id="option_1"></div>
@@ -75,20 +80,63 @@
 
 
             <button type="submit" class="hidden rounded-full bg-red-600 lg:px-40 max-md:w-full max-md:mt-10 text-lg py-2 text-white hover:bg-red-500" id="send" onclick="handleSend(this)">Gửi</button>
-            <button type="submit" class="hidden rounded-full bg-slate-600 lg:px-40 max-md:w-full max-md:mt-10 text-lg py-2 text-white hover:bg-slate-500" id="previus" onclick="handleBack(this)">Quay lại</button>
             <button type="submit" class="hidden rounded-full bg-red-600 lg:px-40 max-md:w-full max-md:mt-10 text-lg py-2 text-white hover:bg-red-500" id="next" onclick="handleNext(this)">Tiếp theo</button>
             <button type="submit" id="start" class=" rounded-full bg-red-600 lg:px-40 max-md:w-full max-md:mt-10 text-lg py-2 text-white hover:bg-red-500" onclick="handleStart(this)">Bắt đầu</button>
             <button type="submit" id="continue_1" class="hidden rounded-full bg-red-600 lg:px-40 max-md:w-full max-md:mt-10 text-lg py-2 text-white hover:bg-red-500" onclick="handleContinue_1(this)">Tiếp tục Test Mong muốn</button>
             <button type="submit" id="continue_2" class="hidden rounded-full bg-red-600 lg:px-40 max-md:w-full max-md:mt-10 text-lg py-2 text-white hover:bg-red-500" onclick="handleContinue_2(this)">Tiếp tục test Language Love</button>
             <button type="submit" id="next_1" class="hidden rounded-full bg-red-600 lg:px-40 max-md:w-full max-md:mt-10 text-lg py-2 text-white hover:bg-red-500" onclick="handleNext_1(this)">Tiếp theo</button>
             <button type="submit" id="next_2" class="hidden rounded-full bg-red-600 lg:px-40 max-md:w-full max-md:mt-10 text-lg py-2 text-white hover:bg-red-500" onclick="handleNext_2(this)">Tiếp theo</button>
-            </form>
-            </div>
 
+    </form>
+    <div id="result_show"  class="hidden mt-[160px] px-36 max-md:px-4 min-h-[30rem]">
+        <h2 class="text-4xl font-bold ">Kết quả</h2>
+    <div class="my-4 flex max-md:flex-col " id="result_show_1">
+<p  class=" p-4 my-2 max-md:w-full  rounded-md bg-white shadow border border-gray-200  mx-4 text-black leading-5 whitespce-nowrap font-bold text-gray-600 w-1/3 py-6">
+       - Tính cách của bạn Kiên định, chắc chắn: Bạn thường rất truyền thống trong hành vi, và bạn thích làm việc theo kế hoạch, không thích trải nghiệm những thứ mới mẻ và có ít sở thích hơn. Cảm xúc của bạn rất phẳng lặng và khả năng chịu đựng thấp đối với những thế giới quan khác biệt.
+    </p>
+<div class="p-4 rounded-md bg-white shadow border border-gray-200  mx-4 text-black leading-5 w-full">
+   - Bạn thường rất truyền thống trong hành vi, và bạn thích làm việc theo kế hoạch, không thích trải nghiệm những thứ mới mẻ và có ít sở thích hơn. Cảm xúc của bạn rất phẳng lặng và khả năng chịu đựng thấp đối với những thế giới quan khác biệt.
+Bạn là những người yêu sự linh hoạt, không thích bị gò bó. Bạn có tính cách thẳng thắn, bộc trực. Bạn sống trọn cho thì hiện tại, quan tâm tới những điều đã và đang xảy tới chứ không suy xét kỹ tới vấn đề cảm xúc nội tâm hay lý thuyết suông.
+Bạn thích tìm kiếm và cần các nguồn kích thích từ môi trường xung quanh, cơ hội để gia nhập với người khác. Bạn như một biến số thích chuyển động, dễ hiểu và dễ tiếp cận. Thái độ của bạn thường rất tự tin và thoải mái. Bạn được miêu tả như tràn trề sức sống và rất tích cực. 
+Bạn có tính nhạy cảm cao thường có thế giới nội tâm phong phú và dễ dàng đồng cảm với người khác. Bạn dễ dàng thể hiện cảm xúc ra bên ngoài, có thể qua lời nói, hành động hoặc ngôn ngữ cơ thể và thấy khó khăn trong việc kiểm soát cảm xúc, đôi khi có thể phản ứng thái quá hoặc mất kiểm soát trong những tình huống căng thẳng. 
+
+
+
+</div>
+    </div>
+    <div class="my-4 flex max-md:flex-col" id="result_show_2">
+<p class="p-4 my-2 max-md:w-full rounded-md flex items-center justify-center  bg-white shadow border border-gray-200  mx-4 text-black leading-5  whitespce-nowrap font-bold w-1/3 py-6">
+       Mong muốn
+    </p>
+<div class="p-4 rounded-md bg-white shadow border border-gray-200  mx-4 text-black leading-5 w-full">
+   - Bạn thường rất truyền thống trong hành vi, và bạn thích làm việc theo kế hoạch, không thích trải nghiệm những thứ mới mẻ và có ít sở thích hơn. Cảm xúc của bạn rất phẳng lặng và khả năng chịu đựng thấp đối với những thế giới quan khác biệt.
+Bạn là những người yêu sự linh hoạt, không thích bị gò bó. Bạn có tính cách thẳng thắn, bộc trực. Bạn sống trọn cho thì hiện tại, quan tâm tới những điều đã và đang xảy tới chứ không suy xét kỹ tới vấn đề cảm xúc nội tâm hay lý thuyết suông.
+Bạn thích tìm kiếm và cần các nguồn kích thích từ môi trường xung quanh, cơ hội để gia nhập với người khác. Bạn như một biến số thích chuyển động, dễ hiểu và dễ tiếp cận. Thái độ của bạn thường rất tự tin và thoải mái. Bạn được miêu tả như tràn trề sức sống và rất tích cực. 
+Bạn có tính nhạy cảm cao thường có thế giới nội tâm phong phú và dễ dàng đồng cảm với người khác. Bạn dễ dàng thể hiện cảm xúc ra bên ngoài, có thể qua lời nói, hành động hoặc ngôn ngữ cơ thể và thấy khó khăn trong việc kiểm soát cảm xúc, đôi khi có thể phản ứng thái quá hoặc mất kiểm soát trong những tình huống căng thẳng. 
+
+
+
+</div>
+    </div>
+    <div class="my-4 flex max-md:flex-col" id="result_show_3">
+<p class=" p-4 my-2 max-md:w-full rounded-md bg-white shadow items-center justify-center  border border-gray-200  mx-4 text-black leading-5 whitespce-nowrap font-bold text-gray-600 w-1/3 max-md:w-full py-6">
+       Ngôn ngữ tình yêu của bạn là
+    </p>
+<div class="p-4 rounded-md bg-white shadow border border-gray-200 max-md:w-full mx-4 text-black leading-5 w-full">
+   - Bạn thường rất truyền thống trong hành vi, và bạn thích làm việc theo kế hoạch, không thích trải nghiệm những thứ mới mẻ và có ít sở thích hơn. Cảm xúc của bạn rất phẳng lặng và khả năng chịu đựng thấp đối với những thế giới quan khác biệt.
+Bạn là những người yêu sự linh hoạt, không thích bị gò bó. Bạn có tính cách thẳng thắn, bộc trực. Bạn sống trọn cho thì hiện tại, quan tâm tới những điều đã và đang xảy tới chứ không suy xét kỹ tới vấn đề cảm xúc nội tâm hay lý thuyết suông.
+Bạn thích tìm kiếm và cần các nguồn kích thích từ môi trường xung quanh, cơ hội để gia nhập với người khác. Bạn như một biến số thích chuyển động, dễ hiểu và dễ tiếp cận. Thái độ của bạn thường rất tự tin và thoải mái. Bạn được miêu tả như tràn trề sức sống và rất tích cực. 
+Bạn có tính nhạy cảm cao thường có thế giới nội tâm phong phú và dễ dàng đồng cảm với người khác. Bạn dễ dàng thể hiện cảm xúc ra bên ngoài, có thể qua lời nói, hành động hoặc ngôn ngữ cơ thể và thấy khó khăn trong việc kiểm soát cảm xúc, đôi khi có thể phản ứng thái quá hoặc mất kiểm soát trong những tình huống căng thẳng. 
+
+
+
+</div>
+    </div>
+    </div>
 
 
         <!-- message -->
-    <button class="fixed bottom-2 right-3 rounded-full bg-red-500 text-white font-bold  px-7 py-2 text-2xl" onclick="handleShowMess()">
+    <button id="message" class="fixed bottom-2 right-3 rounded-full bg-red-500 text-white font-bold  px-7 py-2 text-2xl" onclick="handleShowMess()">
         Let`s Chat!
     </button>
     <div class="hidden fixed bottom-2 right-3 border border-gray-50 bg-white  rounded-xl  shadow-xl p-2">
@@ -109,12 +157,12 @@
         </div>
     </div>
     <!-- footer -->
-    <footer class="w-full mt-6  text-white bg-[#EF0D4A] px-20 border-t border-white shadow-lg">
+    <footer class="w-full mt-6 max-md:px-2  text-white bg-[#EF0D4A] px-20 border-t border-white shadow-lg">
         <p class=" text-2xl mb-2 font-bold pt-10">
             HeartLink
         </p>
         <div class="">
-            <div class="flex items-center max-md:flex-col justify-between">
+            <div class="flex  max-md:flex-col justify-between">
                 <p class="text-white ">
             123-456-7890
             <span class="block leading-5">
@@ -131,10 +179,12 @@
                 <img src="./imgs//icons/ista.png" class="px-2  text-white py-2" alt="">
                 <img src="./imgs//icons/youtube.png" class="px-2  text-white py-2" alt="">
             </div>
+            
         </div>
     </footer>
 </body>
 <script>
+    var result_show = document.getElementById('result_show')
     document.getElementById("myForm").addEventListener("submit", function(event) {
             event.preventDefault(); // Ngăn chặn reload lại trang
             // Thêm logic xử lý form ở đây
@@ -440,6 +490,8 @@
     // Tìm phần tử cha cần thêm các phần tử con vào
 function handleStart(e){
     let question = document.getElementById('option_0');
+    const contnet = document.getElementById('contnet');
+
     let key = `question_${currentIndex}`
 // Lặp qua mảng các câu hỏi
 listQuestion[0][key].forEach((item, index) => {
@@ -449,9 +501,9 @@ listQuestion[0][key].forEach((item, index) => {
 
     // Tạo label cho câu hỏi
     const label = document.createElement('label');
-    label.classList.add('lg:text-xl', 'flex', 'items-center');
+    label.classList.add('lg:text-xl', 'flex','pb-2','leading-5');
     const strongInlabel = document.createElement('strong');
-    strongInlabel.classList.add('pr-1', 'text-lg');
+    strongInlabel.classList.add('pr-1', 'lg:text-xl');
     strongInlabel.innerHTML = index +1;
     label.appendChild(strongInlabel);
     label.innerHTML += item.title;
@@ -459,16 +511,18 @@ listQuestion[0][key].forEach((item, index) => {
 
     // Tạo input và label cho đáp án "Đúng"
     const div1 = document.createElement('div');
-    div1.classList.add('flex', 'items-center', 'pl-4');
+    div1.classList.add('flex', 'pl-4');
     const div1_input = document.createElement('input');
+    div1_input.onclick = handleTrue()
+    div1_input.value = item.correct
     div1_input.setAttribute('type', 'radio');
     div1_input.setAttribute('required', '');
     div1_input.setAttribute('name', `answer_${index }_1`);
-    div1_input.setAttribute('class', 'block text-lg larger-radio');
+    div1_input.setAttribute('class', 'select_d block text-lg larger-radio');
     div1_input.setAttribute('id', `correct_${index }_1`);
     const div1_label = document.createElement('label');
     div1_label.setAttribute('for', `correct_${index}_1`);
-    div1_label.setAttribute('class', 'text-lg px-4');
+    div1_label.setAttribute('class', 'lg:text-base py-1 text-sm px-4');
     div1_label.innerHTML = 'Đúng';
     div1.appendChild(div1_input);
     div1.appendChild(div1_label);
@@ -476,16 +530,18 @@ listQuestion[0][key].forEach((item, index) => {
 
     // Tạo input và label cho đáp án "Sai"
     const div2 = document.createElement('div');
-    div2.classList.add('flex', 'items-center', 'pl-4');
+    div2.classList.add('flex', 'pl-4');
     const div2_input = document.createElement('input');
+    div2_input.onclick = handleFalse()
+     div2_input.value = item.wrong
     div2_input.setAttribute('type', 'radio');
     div2_input.setAttribute('required', '');
     div2_input.setAttribute('name', `answer_${index }_1`);
-    div2_input.setAttribute('class', 'block text-xl larger-radio');
+    div2_input.setAttribute('class', 'select_s block text-xl larger-radio');
     div2_input.setAttribute('id', `wrong_${index}_1`);
     const div2_label = document.createElement('label');
     div2_label.setAttribute('for', `wrong_${index}_1`);
-    div2_label.setAttribute('class', 'text-lg px-4');
+    div2_label.setAttribute('class', 'lg:text-base py-1 text-sm px-4');
     div2_label.innerHTML = 'Sai';
     div2.appendChild(div2_input);
     div2.appendChild(div2_label);
@@ -498,9 +554,10 @@ listQuestion[0][key].forEach((item, index) => {
 });
 
 }
+var checkQuestion = []
+const handleTrue=()=>{checkQuestion.push(true)}
+const handleFalse=()=>{checkQuestion.push(false)}
 
-    function handleShowMess() {}
-    function handleClose() {}
     const checkFormCompletion = () => {
     let allOptionsSelected = true;
     let currentQuestionOptions = listQuestion[0][`question_${currentIndex}`];
@@ -516,7 +573,7 @@ listQuestion[0][key].forEach((item, index) => {
 };
 
 
-   const handleNext =(e)=> {
+const handleNext =(e)=> {
     if(currentIndex == 4) return;
     if (!checkFormCompletion()) {
         return
@@ -541,10 +598,12 @@ listQuestion[0][key].forEach((item, index) => {
     const strongInlabel = document.createElement('strong');
     const div2_label = document.createElement('label');
     const div2_input = document.createElement('input');
+     div2_input.value = item.wrong
+
     const div2 = document.createElement('div');
     const div1_label = document.createElement('label');
-    label.classList.add('lg:text-xl', 'flex', 'items-center');
-    strongInlabel.classList.add('pr-1', 'text-lg');
+    label.classList.add('lg:text-xl', 'flex','pb-2');
+    strongInlabel.classList.add('pr-1', 'lg:text-xl');
     if (currentIndex == 1) {
         strongInlabel.innerHTML =   listQuestion[0][key_old].length +index +1
     }
@@ -556,12 +615,13 @@ listQuestion[0][key].forEach((item, index) => {
     child_1.appendChild(label);
     
     // Tạo input và label cho đáp án "Đúng"
-    div1.classList.add('flex', 'items-center', 'pl-4');
+    div1.classList.add('flex', 'pl-4');
+    div1_input.click = handleTrue()
     div1_input.setAttribute('type', 'radio');
     div1_input.setAttribute('required', '');
-    div1_input.setAttribute('class', 'block text-lg larger-radio');
+    div1_input.setAttribute('class', 'select_d block text-lg larger-radio');
     
-    div1_label.setAttribute('class', 'text-lg px-4');
+    div1_label.setAttribute('class', 'lg:text-base py-1 text-sm px-4');
     div1_label.innerHTML = 'Đúng';
     // check 
     if(currentIndex == 1){
@@ -588,12 +648,13 @@ listQuestion[0][key].forEach((item, index) => {
         div2_label.setAttribute('for', `wrong_${current_index}_1`);
     }
     // Tạo input và label cho đáp án "Sai"
-    div2.classList.add('flex', 'items-center', 'pl-4');
+    div2.classList.add('flex', 'pl-4');
     div2_input.setAttribute('type', 'radio');
     div2_input.setAttribute('required', '');
-
-    div2_input.setAttribute('class', 'block text-xl larger-radio');
-    div2_label.setAttribute('class', 'text-lg px-4');
+     div1_input.value = item.correct
+div2_input.onclick = handleFalse()
+    div2_input.setAttribute('class', 'select_s block text-xl larger-radio');
+    div2_label.setAttribute('class', 'lg:text-base py-1 text-sm py-1  px-4');
     div1.appendChild(div1_input);
     div1.appendChild(div1_label);
     child_1.appendChild(div1);
@@ -626,9 +687,9 @@ const handleContinue_1 = () => {
         child_1.classList.add('pl-6', 'py-4');
         // Tạo label cho câu hỏi
         const label = document.createElement('label');
-        label.classList.add('lg:text-xl', 'flex', 'items-center');
+        label.classList.add('lg:text-xl', 'flex','pb-2');
         const strongInlabel = document.createElement('strong');
-        strongInlabel.classList.add('pr-1', 'text-lg');
+        strongInlabel.classList.add('pr-1', 'lg:text-xl','text-base');
         strongInlabel.innerHTML = index + 1;
         label.appendChild(strongInlabel);
         label.innerHTML += item.title;
@@ -636,16 +697,18 @@ const handleContinue_1 = () => {
 
         // Tạo input và label cho đáp án "Đúng"
         const div1 = document.createElement('div');
-        div1.classList.add('flex', 'items-center', 'pl-4');
+        div1.classList.add('flex', 'pl-4');
         const div1_input = document.createElement('input');
+        div1_input.onclick = handleOption_1(true)
+        div1_input.value = 1
         div1_input.setAttribute('type', 'radio');
         div1_input.setAttribute('required', '');
-        div1_input.setAttribute('name', `answer_${index}_1`);
-        div1_input.setAttribute('class', 'block text-lg larger-radio');
-        div1_input.setAttribute('id', `correct_${index}_1`);
+        div1_input.setAttribute('name', `answer2_${index}_1`);
+        div1_input.setAttribute('class', 'selectQuesOp_1 block text-lg larger-radio');
+        div1_input.setAttribute('id', `correct2_${index}_1`);
         const div1_label = document.createElement('label');
-        div1_label.setAttribute('for', `correct_${index}_1`);
-        div1_label.setAttribute('class', 'text-lg px-4');
+        div1_label.setAttribute('for', `correct2_${index}_1`);
+        div1_label.setAttribute('class', 'text-sm py-1  leading-5 px-4');
         div1_label.innerHTML = item.A;
         div1.appendChild(div1_input);
         div1.appendChild(div1_label);
@@ -653,16 +716,18 @@ const handleContinue_1 = () => {
 
         // Tạo input và label cho đáp án "Sai"
         const div2 = document.createElement('div');
-        div2.classList.add('flex', 'items-center', 'pl-4');
+        div2.classList.add('flex', 'pl-4');
         const div2_input = document.createElement('input');
+        div2_input.value = 2
+
         div2_input.setAttribute('type', 'radio');
         div2_input.setAttribute('required', '');
-        div2_input.setAttribute('name', `answer_${index}_1`);
-        div2_input.setAttribute('class', 'block text-xl larger-radio');
-        div2_input.setAttribute('id', `wrong_${index}_1`);
+        div2_input.setAttribute('name', `answer2_${index}_1`);
+        div2_input.setAttribute('class', 'selectQuesOp_2 block text-xl larger-radio');
+        div2_input.setAttribute('id', `wrong2_${index}_1`);
         const div2_label = document.createElement('label');
-        div2_label.setAttribute('for', `wrong_${index}_1`);
-        div2_label.setAttribute('class', 'text-lg px-4');
+        div2_label.setAttribute('for', `wrong2_${index}_1`);
+        div2_label.setAttribute('class', 'text-sm py-1  leading-5 px-4');
         
         div2_label.innerHTML = item.B;
         div2.appendChild(div2_input);
@@ -670,17 +735,21 @@ const handleContinue_1 = () => {
         child_1.appendChild(div2);
 
         const div3 = document.createElement('div');
-        div3.classList.add('flex', 'items-center', 'pl-4');
+        div3.classList.add('flex', 'pl-4');
         const div3_input = document.createElement('input');
+        div3_input.value = 3
         div3_input.setAttribute('type', 'radio');
         div3_input.setAttribute('required', '');
-        div3_input.setAttribute('name', `answer_${index}_1`);
-        div3_input.setAttribute('class', 'block text-xl larger-radio');
-        div3_input.setAttribute('id', `wrong_${index}_1`);
+        div3_input.setAttribute('name', `answer2_${index}_1`);
+        div3_input.setAttribute('class', 'selectQuesOp_3 block text-sm leading-5 larger-radio');
+        div3_input.setAttribute('id', `wrong2_${index}_1`);
         const div3_label = document.createElement('label');
-        div3_label.setAttribute('for', `wrong_${index}_1`);
-        div3_label.setAttribute('class', 'text-xl px-4');
+        div3_label.setAttribute('for', `wrong2_${index}_1`);
+        div3_label.setAttribute('class', 'text-sm py-1  leading-5 px-4');
         div2_label.innerHTML = item.C;
+        div2_input.onclick = handleOption_1(false)
+        div3_input.onclick = handleOption_1(true)
+
         div2.appendChild(div2_input);
         div2.appendChild(div2_label);
         child_1.appendChild(div2);
@@ -694,7 +763,15 @@ const handleContinue_1 = () => {
     
     });
 };
-
+var countOption_1 = []
+const handleOption_1 =(e)=>{
+    if(e == true){
+countOption_1.push(true)
+    }
+    else if(e == false){
+countOption_1.push(false)
+    }
+}
 const handleContinue_2 =()=>{
     title_test.innerHTML = 'Test Tình Yêu'
     let question_old = document.getElementById('option_3');
@@ -707,9 +784,9 @@ const handleContinue_2 =()=>{
         child_1.classList.add('pl-6', 'py-4');
         // Tạo label cho câu hỏi
         const label = document.createElement('label');
-        label.classList.add('lg:text-xl', 'flex', 'items-center');
+        label.classList.add('lg:text-xl', 'text-lg','flex','py-1.5');
         const strongInlabel = document.createElement('strong');
-        strongInlabel.classList.add('pr-1', 'text-lg');
+        strongInlabel.classList.add('pr-1', 'lg:text-xl');
         strongInlabel.innerHTML = index + 1;
         label.appendChild(strongInlabel);
         label.innerHTML += item.title;
@@ -717,33 +794,37 @@ const handleContinue_2 =()=>{
 
         // Tạo input và label cho đáp án "Đúng"
         const div1 = document.createElement('div');
-        div1.classList.add('flex', 'items-center', 'pl-4');
+        div1.classList.add('flex', 'pl-4','py-1');
         const div1_input = document.createElement('input');
         div1_input.setAttribute('type', 'radio');
         div1_input.setAttribute('required', '');
-        div1_input.setAttribute('name', `answer_${index}_1`);
-        div1_input.setAttribute('class', 'block text-lg larger-radio');
-        div1_input.setAttribute('id', `correct_${index}_1`);
+        div1_input.setAttribute('name', `answer10_${index}_1`);
+        div1_input.setAttribute('class', 'listQuest_1 block text-lg larger-radio py-1.5');
+        div1_input.value = 1
+        div1_input.setAttribute('id', `correct10_${index}_1`);
         const div1_label = document.createElement('label');
-        div1_label.setAttribute('for', `correct_${index}_1`);
-        div1_label.setAttribute('class', 'text-xl px-4');
+        div1_label.setAttribute('for', `correct10_${index}_1`);
+        div1_label.setAttribute('class', 'max-md:text-sm leading-5 px-4 ');
         div1_label.innerHTML = item.A;
+        div1_input.onclick = CheckQuestion_2('A')
         div1.appendChild(div1_input);
         div1.appendChild(div1_label);
         child_1.appendChild(div1);
 
         // Tạo input và label cho đáp án "Sai"
         const div2 = document.createElement('div');
-        div2.classList.add('flex', 'items-center', 'pl-4');
+        div2.classList.add('flex', 'pl-4','py-1');
         const div2_input = document.createElement('input');
+        div2_input.value = 2
+        div2_input.onclick = CheckQuestion_2('B')
         div2_input.setAttribute('type', 'radio');
         div2_input.setAttribute('required', '');
-        div2_input.setAttribute('name', `answer_${index}_1`);
-        div2_input.setAttribute('class', 'block text-xl larger-radio');
-        div2_input.setAttribute('id', `wrong_${index}_1`);
+        div2_input.setAttribute('name', `answer10_${index}_1`);
+        div2_input.setAttribute('class', 'listQuest_2 block text-xl larger-radio py-1');
+        div2_input.setAttribute('id', `wrong10_${index}_1`);
         const div2_label = document.createElement('label');
-        div2_label.setAttribute('for', `wrong_${index}_1`);
-        div2_label.setAttribute('class', 'text-lg px-4');
+        div2_label.setAttribute('for', `wrong10_${index}_1`);
+        div2_label.setAttribute('class', 'max-md:text-sm leading-5 px-4');
         
         div2_label.innerHTML = item.B;
         div2.appendChild(div2_input);
@@ -751,31 +832,37 @@ const handleContinue_2 =()=>{
         child_1.appendChild(div2);
 
         const div3 = document.createElement('div');
-        div3.classList.add('flex', 'items-center', 'pl-4');
+        div3.classList.add('flex', 'pl-4','py-1');
         const div3_input = document.createElement('input');
+        div2_input.value = 3
+        div3_input.onclick = CheckQuestion_2('C')
         div3_input.setAttribute('type', 'radio');
         div3_input.setAttribute('required', '');
-        div3_input.setAttribute('name', `answer_${index}_1`);
-        div3_input.setAttribute('class', 'block text-xl larger-radio');
-        div3_input.setAttribute('id', `wrong_${index}_1`);
+        div3_input.setAttribute('name', `answer10_${index}_1`);
+        div3_input.setAttribute('class', 'listQuest_3 block text-xl py-1 larger-radio');
+        div3_input.setAttribute('id', `wrong10_${index}_1`);
         const div3_label = document.createElement('label');
-        div3_label.setAttribute('for', `wrong_${index}_1`);
-        div3_label.setAttribute('class', 'text-lg px-4');
+        div3_label.setAttribute('for', `wrong10_${index}_1`);
+        div3_label.setAttribute('class', ' max-md:text-sm leading-5 px-4');
         div3_label.innerHTML = item.C;
         div3.appendChild(div3_input);
         div3.appendChild(div3_label);
         child_1.appendChild(div3);
 const div4 = document.createElement('div');
-        div4.classList.add('flex', 'items-center', 'pl-4');
-        const div4_input = document.createElement('input');
-        div4_input.setAttribute('type', 'radio');
-        div4_input.setAttribute('required', '');
-        div4_input.setAttribute('name', `answer_${index}_1`);
-        div4_input.setAttribute('class', 'block text-xl larger-radio');
-        div4_input.setAttribute('id', `wrong_${index}_1`);
-        const div4_label = document.createElement('label');
-        div4_label.setAttribute('for', `wrong_${index}_1`);
-        div4_label.setAttribute('class', 'text-lg px-4');
+div4.classList.add('flex', 'pl-4','py-1');
+const div4_input = document.createElement('input');
+div4_input.value = 4
+        div4_input.onclick = CheckQuestion_2('D')
+
+div4_input.setAttribute('type', 'radio');
+div4_input.setAttribute('required', '');
+div4_input.setAttribute('name', `answer10_${index}_1`);
+div4_input.setAttribute('class', 'listQuest_4 block text-xl larger-radio py-1');
+div4_input.setAttribute('id', `wrong10_${index}_1`);
+const div4_label = document.createElement('label');
+        
+        div4_label.setAttribute('for', `wrong10_${index}_1`);
+        div4_label.setAttribute('class', 'max-md:text-sm leading-5 px-4');
         div4_label.innerHTML = item.D;
         div4.appendChild(div4_input);
         div4.appendChild(div4_label);
@@ -789,9 +876,65 @@ const div4 = document.createElement('div');
         
     });
 }
- const handleSend =()=>{
+var list_123 = [
+'Kiên định, chắc chắn: Bạn thường rất truyền thống trong hành vi, và bạn thích làm việc theo kế hoạch, không thích trải nghiệm những thứ mới mẻ và có ít sở thích hơn. Cảm xúc của bạn rất phẳng lặng và khả năng chịu đựng thấp đối với những thế giới quan khác biệt.'
+,
+'Sáng tạo, hiếu kỳ: Bạn thích phiêu lưu trải nghiệm, hiếu kỳ, có những ý tưởng độc đáo, có óc thẩm mỹ. Có vẻ như bạn thường rất khó dự đoán và hơi dễ mất tập trung. Bạn dễ lĩnh hội những suy nghĩ và cảm xúc cá nhân',
+,
+'Đơn độc, kín đáo: Bạn thường ít hòa mình với xã hội. Bạn thường rất yên lặng, không nổi bật và không hòa nhập nhiều. Thay vì thay đổi thế giới thì bạn lại thích nghĩ và tìm hiểu về nó hơn. Bạn suy nghĩ rất sâu về nhiều thứ và bạn cũng thích những mối quan hệ có có chiều sâu. ',
+'Hòa đồng, mạnh mẽ: Bạn thích tìm kiếm và cần các nguồn kích thích từ môi trường xung quanh, cơ hội để gia nhập với người khác. Bạn như một biến số thích chuyển động, dễ hiểu và dễ tiếp cận. Thái độ của bạn thường rất tự tin và thoải mái. Bạn được miêu tả như tràn trề sức sống và rất tích cực. ',
+'Vững chắc, tự tin. Bạn thường có xu hướng bình tĩnh, không nóng nảy, và ít khi cảm thấy căng thẳng. Bạn hiểu rõ và nhận thức được cảm xúc của bản thân, có khả năng điều chỉnh và kiểm soát tốt. Bạn ít khi bộc lộ cảm xúc một cách thái quá hoặc mất kiểm soát, đặc biệt là trong những tình huống căng thẳng. Bạn biết cách thể hiện cảm xúc một cách phù hợp và hiệu quả, tránh gây tổn thương cho bản thân hoặc người khác. ',
+'Nhạy cảm, hoảng sợ: Bạn có tính nhạy cảm cao thường có thế giới nội tâm phong phú và dễ dàng đồng cảm với người khác. Bạn dễ dàng thể hiện cảm xúc ra bên ngoài, có thể qua lời nói, hành động hoặc ngôn ngữ cơ thể và thấy khó khăn trong việc kiểm soát cảm xúc, đôi khi có thể phản ứng thái quá hoặc mất kiểm soát trong những tình huống căng thẳng. ',
 
- }
+]
+var list_1234 = [
+'Bạn đánh giá cao sự ổn định và cam kết trong mối quan hệ. Bạn cảm thấy an toàn khi có một kế hoạch và dự định rõ ràng cho tương lai. Đối với bạn, sự hiểu biết và chia sẻ giữa hai người là quan trọng, và bạn mong muốn một mối quan hệ lâu dài và đáng tin cậy.',
+' Bạn là người sáng tạo và thích mạo hiểm trong mối quan hệ. Bạn cảm thấy hứng thú khi có sự kích thích và mối quan hệ gần gũi. Đối với bạn, sự ngẫu hứng và sự thay đổi là quan trọng, và bạn muốn một mối quan hệ linh hoạt và đáp ứng được nhu cầu cảm xúc của bạn.',
+'Bạn đánh giá cao sự độc lập và tự do trong mối quan hệ. Bạn cảm thấy hạnh phúc khi có không gian riêng để theo đuổi đam mê cá nhân. Đối với bạn, sự độc lập và sự tôn trọng cho nhau là quan trọng, và bạn muốn một mối quan hệ linh hoạt và cung cấp không gian cho cả hai bên tự phát triển.',
+
+]
+var list_1235 = [
+"Lời nói ở đây có thể được hiểu là những câu từ thể hiện cảm xúc, sự trân trọng, hay lời khen dành cho đối phương. Những câu nói đơn giản mà bạn có thể dành cho người dùng Words of affirmation như “Anh yêu em”, “Em yêu anh”, “Anh cảm ơn em”, “Anh nhớ em”,...  Nếu yêu một người thuộc hệ ngôn ngữ WoA này, bạn hãy thường xuyên gửi đến họ những lời nói tình cảm, những câu nói động viên và khích lệ người ấy nhé. Hơn nữa, những người này cũng sẽ thích việc được duy trì và kết online thường xuyên với bạn đấy. Và ngược lại, nếu bạn dùng những câu nói vô tâm, những từ ngữ xúc phạm, coi thường họ, họ sẽ cảm thấy bị tổn thương sâu sắc. Khi đó, họ lại cần có thời gian chữa lành những cảm xúc và phục hồi lại trạng thái bình thường. ",
+'Những người thuộc hệ Acts of Service thích dùng hành động, và mong muốn thấy hành động hơn là những lời nói trên đầu môi chót lưỡi. Những hành động đơn giản có thể kể đến như xách túi giúp, chuẩn bị đồ ăn sáng, đồ ăn trưa, chủ động đưa đi ăn, chủ động làm việc nhà,... Không cần quá lớn lao, chỉ cần những thứ nhỏ nhặt cũng đủ khiến đối phương cảm động. Bạn cũng đừng quá nặng nề nếu yêu phải một người thuộc tuýp Acts of Service. Điều này có nghĩa là bạn không cần lúc nào cũng phải thể hiện bằng cách hành động trước mặt cô ấy/ anh ấy. Chỉ cần những lúc thiết thực nhất, cụ thể nhất là bạn đã có thể giữ được trái tim của đối phương rồi. Hãy luôn chủ động làm những việc mà đối phương muốn, hoặc bạn biết rõ đối phương đang cần hoặc muốn làm. Như vậy, cả hai sẽ có nhiều cơ hội thân thiết và thấu hiểu nhau hơn. Tránh việc thất hứa hay lười biếng. Vì đây là những điều đại kị với người “nói” thứ ngôn ngữ tình yêu này. '
+,'Những người thuộc tuýp “nói” ngôn ngữ này không phải là họ thực dụng, vì họ sẽ không coi trọng giá trị của món quà, mà thay vào đó là ý nghĩa của món quà ấy. Họ sẽ cảm thấy được yêu thương, được quan tâm khi nhận được những món quà đầy ý nghĩa từ đối phương.  Nếu bạn hoặc người yêu là người sử dụng ngôn ngữ này thì hãy để ý và ghi nhớ những ngày đặc biệt như sinh nhật, kỉ niệm ngày cưới, kỉ niệm ngày yêu nhau,... và gửi đến họ những món quà. Hay không cần một dịp gì cả, bạn có thể thể hiện tình cảm của mình bằng một cành hoa, một món đồ mà đối phương đang rất thích và muốn có được nó. Chính việc để ý và quan tâm đến những sở thích của nhau sẽ giúp bạn có thêm nhiều cơ hội để bày tỏ tình cảm của mình. Hãy ghi lại mỗi lần bạn nghe đối phương thích một món gì đó. Việc tặng quà bất ngờ cũng sẽ giúp mối quan hệ thêm thú vị đó. '
+,'Những người thuộc tuýp ngôn ngữ này luôn muốn và luôn thích sự có mặt và hiện diện của đối phương. Họ sẽ cảm thấy được yêu thương nếu đối phương dành thời gian cho họ. Dĩ nhiên, đấy phải là thời gian chất lượng khi mà cả 2 thực sự tập trung vào nhau, mà không bị chi phối bởi bất kì thiết bị điện tử hay công việc gì. Nếu yêu một người dùng ngôn ngữ Quality time này, bạn nên cố gắng sắp xếp thời gian rảnh cho người ấy. Có thể là một buổi tối xem phim hấp dẫn, một bữa ăn lãng mạn, đưa nhau đi shopping, đi nhà sách, hay dành những vài ngày cuối tuần để đi du lịch cùng nhau sẽ giúp cả 2 gia tăng hương vị cho tình yêu đấy. '
+,'Physical touch có thể hiểu là những tiếp xúc cơ thể, những cái âu yếm, vuốt ve mà đối phương dành cho bạn, hoặc họ muốn nhận được từ bạn.  Dĩ nhiên, người thuộc tuýp ngôn ngữ này không phải thuộc dạng “biến thái” hay chỉ nghĩ đến nhu cầu tình dục. Nhưng việc tiếp xúc và va chạm trên cơ thể sẽ khiến họ cảm thấy yêu và được yêu nhiều hơn. Những cái ôm, những nụ hôn, những cái nắm tay, ôm eo,... cũng là một cách mà người Physical touch dùng để thể hiện ngôn ngữ trong tình yêu của mình.  Tuy nhiên, những vấn đề này khá nhạy cảm, và không phải đối phương nào cũng thoải mái với những hành vi này. Do đó, bạn cần xác định kĩ mối quan hệ, cũng như nhận biết mức độ gần gũi cho phép để không vượt quá giới hạn gây khó khăn và cản trở trong mối quan hệ của mình nhé. '
+]
+function getRandomElement(array) {
+    // Tạo một số ngẫu nhiên từ 0 đến độ dài của mảng
+    const randomIndex = Math.floor(Math.random() * array.length);
+    // Trả về phần tử tại chỉ số ngẫu nhiên đã tạo
+    return array[randomIndex];
+}
+var countQuestion_2 = []
+const CheckQuestion_2 =(e)=>{
+    if(e == 'A'){
+countQuestion_2.push(e)
+    }else  if(e == 'B'){
+countQuestion_2.push(e)
+    }
+    else  if(e == 'C'){
+countQuestion_2.push(e)
+    }
+    else  if(e == 'D'){
+countQuestion_2.push(e)
+    }
+    
+}
+ const handleSend = () => {
+
+const div = result_show_1.querySelector('div')
+const div2 = result_show_2.querySelector('div')
+const div3 = result_show_3.querySelector('div')
+div.innerHTML = getRandomElement(list_123)
+div2.innerHTML = getRandomElement(list_1234)
+div3.innerHTML = getRandomElement(list_1235)
+
+
+document.querySelector('#myForm').classList.add('hidden')
+result_show.classList.remove('hidden')
+}
+
 
 </script>
 <script src="./javascript/main.js"> 

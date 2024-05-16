@@ -11,3 +11,9 @@ function handleLogout() {
   localStorage.removeItem("login");
   window.location.reload();
 }
+function handleShowMess() {
+  document.getElementById("message").classList.remove("hidden");
+}
+function handleClose() {
+  document.getElementById("message").classList.add("hidden");
+}

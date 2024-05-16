@@ -49,7 +49,7 @@
 
     </header>
         <!-- body -->
-        <div class="mt-[160px] px-40 max-md:px-2  bg-[#F5D3E3] flex items-center justify-center">
+        <div class="mt-[130px] px-40 max-md:px-2  bg-[#F5D3E3] flex items-center justify-center">
             <div class="lg:w-[980px] py-10  px-4 text-[#B0B1BA]">
                 <h2 class="flex text-black j mt-6  mb-4 text-3xl font-bold">
                     Đánh giá
@@ -114,7 +114,7 @@
                         0
                     </div>
                 </div>
-                <h2 class="text-3xl font-semibold text-gray-700 my-4">
+                <h2 id="final" class="text-3xl font-semibold text-gray-700 my-4">
                     Để lại đánh giá cho chúng tôi
                 </h2>
                 <div class="max-w-md mx-auto bg-white p-6 rounded-md shadow-md">
@@ -122,16 +122,16 @@
         <form id="ratingForm" onsubmit="handleSendFeedBack()" class="w-full">
             <div class="mb-4">
                 <label for="fullName" class="block text-sm font-medium text-gray-700">Họ và Tên</label>
-                <input type="text" id="fullName" name="fullName" class="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500">
+                <input required type="text" id="fullName" name="fullName" class="text-black mt-1 p-2 block w-full border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500">
             </div>
             <div class="mb-4 text-black">
                 <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                <input type="email" id="email" name="email" class="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500">
+                <input required type="email" id="email" name="email" class="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500">
             </div>
             <div class="mb-4">
                 <label for="rating" class="block text-sm font-medium text-gray-700">Đánh giá</label>
                 <div class="flex items-center">
-                    <input type="range" id="rating" name="rating" min="1" max="5" class="mt-1 flex-grow border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500" style="padding: 10px;">
+                    <input required type="range" id="rating" name="rating" min="1" max="5" class="mt-1 flex-grow border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500" style="padding: 10px;">
                     <span id="ratingValue" class="ml-4 text-gray-700"></span>
                 </div>
             </div>
@@ -145,7 +145,7 @@
     <button class="fixed bottom-2 right-3 rounded-full bg-red-500 text-white font-bold  px-7 py-2 text-2xl" onclick="handleShowMess()">
         Let`s Chat!
     </button>
-    <div class="hidden fixed bottom-2 right-3 border border-gray-50 bg-white  rounded-xl  shadow-xl p-2">
+    <div id="message" class="hidden fixed bottom-2 right-3 border border-gray-50 bg-white  rounded-xl  shadow-xl p-2">
         <div class="flex items-center  p-2  border-b border-gray-100">
             <img src="./imgs//icons/header-icon.png" class="rouned-full w-16 h-14 px-2" alt="">
             <div class="">
@@ -182,10 +182,11 @@
 <script src="./javascript/main.js"></script>
 
 <script>
-
+    var final  = document.getElementById('final')
     let feedback = document.getElementById('ratingForm')
     feedback.addEventListener('submit',(e)=>{
         e.preventDefault()
+        final.innerHTML = 'Gửi đánh giá thành công !';
     })
 </script>
 </html>
