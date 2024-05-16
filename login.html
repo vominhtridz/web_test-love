@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="./main.css">
     <link rel="stylesheet" href="./fontawesome-free-6.5.2-web/css/all.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
 
 </head>
 <body>
@@ -19,7 +20,7 @@
                 Heartlink</p>
            </a>   
            </div>
-           <div class="bg-red-500 px-6 py-6 text-white flex items-center">
+           <div class="bg-red-500 px-6 py-2 text-white flex items-center">
             <ul class=" bg-slate-100 text-gray-600  rounded-full list-none max-md:px-1 flex items-center max-md:overflow-x-scroll whitespace-norwap" id="route_link">
                 <a href="/home.html" class="px-2 py-1 font-bold text-base whitespace-nowrap">Trang chủ</a>
                 <a href="/personalityTest.html" class="px-4 py-1 font-bold text-base whitespace-nowrap">Test tính cách</a>
@@ -60,7 +61,7 @@
     </div>
     <div class="container mt-[14rem] mx-auto max-md:w-full w-[40rem]" id="container">
         <div class=" w-full  ">
-            <form class="loginForm  w-full" method="post">
+            <form class="loginForm  w-full"  id="login">
                 <h1 class="text-xl py-2 font-bold">Đăng nhập</h1>
                 <span> Nhập tên người dùng và mật khẩu đã đăng kí.</span>
                 <div class="w-full">
@@ -76,7 +77,7 @@
                 </div>
                 <button class="text-blue-500 ml-auto">Quên mật khẩu?</button>
                 <div class="flex justify-between w-full my-2">
-                    <button type="submit" class="bg-red-600 text-sm rounded-md px-4 py-2  text-white" onclick="handleLogin()">Đăng Nhập</button>
+                    <button type="submit" class="bg-red-600 text-sm rounded-md px-4 py-2  text-white" >Đăng Nhập</button>
                     <div class="flex items-center">
                         <p class="pt-1 px-2 mt-0 mb-0 ">chưa có tài khoản? </p>
                         <a href="./register.html"  class="my-0"><p class="p-0 text-blue-600 underline">Đăng Kí</p></a>
@@ -89,29 +90,36 @@
     </div>
     
 
-<footer class="w-full mt-10   text-white bg-[#EF0D4A] px-20 border-t border-white shadow-lg">
-        <p class=" text-2xl mb-2 font-bold pt-10">
-            HeartLink
-        </p>
-        <div class="">
-            <div class="flex items-center max-md:flex-col justify-between">
-                <p class="text-white ">
-            123-456-7890
-            <span class="block leading-5">
-                heartlinkxinchao@gmail.com
-            </span>
-            </p>
-            <p>
-            279 Nguyễn Tri Phương, Phường 5, Quận 10, TPHCM
-            </p>
+<footer class="shadow text-left p-4 bg-slate-100">
 
-            </div>
-            <div class="flex items-center">
-                <img src="./imgs//icons/facebook.png" class="px-2  text-white py-2" alt="">
-                <img src="./imgs//icons/ista.png" class="px-2  text-white py-2" alt="">
-                <img src="./imgs//icons/youtube.png" class="px-2  text-white py-2" alt="">
-            </div>
+        <p class="text-3xl py-2 text-black font-bold">Tư vấn trực <br> tiếp tại:</p>
+        <div class="text-left py-6 text-slate-800">
+            <p>279 Nguyễn tri phương</p>
+            <p>Phường 5, Quận 10 ,TP HCM</p>
+            <p>heartlink@gmail.com</p>
+            <p>SDT:024 3456 7890</p>
+        </div>
+        <div class="flex items-center text-slate-800 ">
+            <i class="fa-brands px-2.5 hover:text-blue-600 cursor-pointer text-3xl fa-instagram"></i>
+            <i class="fa-brands px-2.5 hover:text-blue-600 cursor-pointer text-3xl fa-facebook"></i>
+            <i class="fa-brands px-2.5 hover:text-blue-600 cursor-pointer text-3xl fa-twitter"></i>
         </div>
     </footer>
 </body>
+<script >
+    document.getElementById("login").addEventListener("submit", (e) => {
+  e.preventDefault();
+  localStorage.setItem("login", JSON.stringify(true));
+  window.location.href = "/home.html";
+  const register = document.getElementById('register')
+    const login = document.getElementById('login')
+    const loggedin = document.getElementById('loggedin')
+    const handle = JSON.parse(localStorage.getItem('login'))
+    if(handle){
+        register.classList.add('hidden')
+        login.classList.add('hidden')
+        loggedin.classList.remove('hidden')
+    }
+});
+</script>
 </html>

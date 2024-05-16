@@ -2,18 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0">
     <title>Tạo hồ sơ</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./fontawesome-free-6.5.2-web/css/all.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
+
    <style>
     .larger-radio {
-        transform: scale(1.4); /* Điều chỉnh kích thước theo tỷ lệ */
+        transform: scale(1.6); /* Điều chỉnh kích thước theo tỷ lệ */
          /* Khoảng cách giữa các radio button */
     }
-    body{
-        font-family: Georgia, serif;
-    }
+   
+    
 </style>
 </head>
 <body>
@@ -27,7 +28,7 @@
                 Heartlink</p>
            </a>   
            </div>
-           <div class="bg-red-500 px-6 py-6 text-white flex items-center">
+           <div class="bg-red-500 px-6 py-2 text-white flex items-center">
             <ul class=" bg-slate-100 text-gray-600  rounded-full list-none max-md:px-1 flex items-center max-md:overflow-x-scroll whitespace-norwap" id="route_link">
                 <a href="/home.html" class="px-2 py-1 font-bold text-base whitespace-nowrap">Trang chủ</a>
                 <a href="/personalityTest.html" class="px-4 py-1 font-bold text-base whitespace-nowrap">Test tính cách</a>
@@ -37,275 +38,55 @@
                 <a href="/login.html" class="px-4 py-1 font-bold text-base whitespace-nowrap hidden max-md:block">Đăng nhập</a>
                 <a href="/register.html" class="px-4 py-1 font-bold text-base whitespace-nowrap hidden max-md:block">Đăng kí</a>
             </ul>
-            <a class="ml-auto px-4 text-lg font-bold text white block max-md:hidden" href="./register.html">
+            <a class="ml-auto px-4 text-lg font-bold text white block max-md:hidden" id="register" href="./register.html">
                 Đăng kí</a>
 
-                 <a class="px-4 text-lg font-bold text white block max-md:hidden" href="/login.html">
+                 <a class="px-4 text-lg font-bold text white block max-md:hidden" id="login" href="/login.html">
                 Đăng nhập</a>
+                <div class="hidden ml-auto text-lg relative" id="loggedin">
+                    <div class="flex items-center">
+                        <img src="./imgs/icons/user-img.png" class="px-2 w-14" alt=""> user
+                    </div>
+                    <div class="avsolute top-full  w-full shadow bg-white right-0 px-4 py-0.5">
+                        <button class="text-gray-700"  onclick="handleLogout()">
+                        Đăng Xuất
+                    </button>
+                </div>
            </div>
 
     </header>
         <!-- body -->
-        <div class="mt-[160px] px-36 max-md:px-4">
-            <h2 class="lg:text-5xl font-bold text-gray-500 py-8">Test tính cách</h2>
-
+        <form class="mt-[160px] px-36 max-md:px-4 lg:min-h-[30rem]" id="myForm">
+            <h2 id="title_test" class="lg:text-5xl font-bold text-gray-500 py-8">Test tính cách</h2>
             <!-- option -->
-            <div class="">
-                <h2 class="pt-4 lg:text-3xl lg:font-bold text-gray-700">1. Kiên định, chắc chắn / Sáng tạo, hiếu kỳ</h2>
-                <div class="pl-6 py-4">
-                    <label for="correct_1_1" class="lg:text-lg">
-                        <strong class="px-2">1.1</strong> Bạn dành rất nhiều thời gian rảnh vào việc tìm hiểu về các chủ đề ngẫu nhiên mà thu hút sự chú ý của bạn.
-                    </label>
-                    <div class="flex items-center pl-4">
-                        <input type="radio" name="answer_1_1" class="block text-lg larger-radio" id="correct_1_1">
-                        <label for="correct_1_1" class="text-lg px-4">Đúng</label>
-                    </div>
-                    <div class="flex items-center pl-4">
-                        <input type="radio" name="answer_1_1" class="block text-xl larger-radio" id="wrong_1_1">
-                        <label for="wrong_1_1" class="text-lg px-4">Sai</label>
-                    </div>
-                </div>
-                <div class="pl-6 py-4">
-                    <label for="correct_1_2" class="lg:text-lg">
-                        <strong class="px-2">1.2</strong> Bạn lúc nào cũng bị thu hút bởi những câu hỏi về điều gì, chẳng hạn như, điều gì sẽ xảy ra sau khi ta chết đi.
-                    </label>
-                    <div class="flex items-center pl-4">
-                        <input type="radio" name="answer_1_2" class="block text-lg larger-radio" id="correct_1_2">
-                        <label for="correct_1_2" class="text-lg px-4">Đúng</label>
-                    </div>
-                    <div class="flex items-center pl-4">
-                        <input type="radio" name="answer_1_2" class="block text-xl larger-radio" id="wrong_1_2">
-                        <label for="wrong_1_2" class="text-lg px-4">Sai</label>
-                    </div>
-                </div>
-                <div class="pl-6 py-4">
-                    <label for="correct_1_3" class="lg:text-lg">
-                        <strong class="px-2">1.3</strong> Bạn thường thấy nhàm chán hoặc mất hứng thú khi cuộc thảo luận bắt đầu có tính thuyết giáo.
-                    </label>
-                    <div class="flex items-center pl-4">
-                        <input type="radio" name="answer_1_3" class="block text-lg larger-radio" id="correct_1_3">
-                        <label for="correct_1_3" class="text-lg px-4">Đúng</label>
-                    </div>
-                    <div class="flex items-center pl-4">
-                        <input type="radio" name="answer_1_3" class="block text-xl larger-radio" id="wrong_1_3">
-                        <label for="wrong_1_3" class="text-lg px-4">Sai</label>
-                    </div>
-                </div>
-                <div class="pl-6 py-4">
-                    <label for="correct_1_4" class="lg:text-lg">
-                        <strong class="px-2">1.4</strong> Bạn thường dành nhiều thời gian để cố gắng hiểu những góc nhìn/quan điểm khác với bạn.
-                    </label>
-                    <div class="flex items-center pl-4">
-                        <input type="radio" name="answer_1_4" class="block text-lg larger-radio" id="correct_1_4">
-                        <label for="correct_1_4" class="text-lg px-4">Đúng</label>
-                    </div>
-                    <div class="flex items-center pl-4">
-                        <input type="radio" name="answer_1_4" class="block text-xl larger-radio" id="wrong_1_4">
-                        <label for="wrong_1_4" class="text-lg px-4">Sai</label>
-                    </div>
-                </div>
+            <div class="option_select" id="option_0"></div>
+            <div class="option_select" id="option_1"></div>
+            <div class="option_select" id="option_2"></div>
+            <div class="option_select" id="option_3"></div>
+            <div class="option_select" id="option_4"></div>
+            <div class="option_select" id="option_5"></div>
+            <div class="option_select" id="option_6"></div>
+            <div class="option_select" id="option_7"></div>
+            <div class="option_select" id="option_8"></div>
+            <div class="option_select" id="option_9"></div>
+            <div class="option_select" id="option_10"></div>
+            <div class="option_select" id="option_11"></div>
+            <div class="option_select" id="option_12"></div>
+
+
+            <button type="submit" class="hidden rounded-full bg-red-600 lg:px-40 max-md:w-full max-md:mt-10 text-lg py-2 text-white hover:bg-red-500" id="send" onclick="handleSend(this)">Gửi</button>
+            <button type="submit" class="hidden rounded-full bg-slate-600 lg:px-40 max-md:w-full max-md:mt-10 text-lg py-2 text-white hover:bg-slate-500" id="previus" onclick="handleBack(this)">Quay lại</button>
+            <button type="submit" class="hidden rounded-full bg-red-600 lg:px-40 max-md:w-full max-md:mt-10 text-lg py-2 text-white hover:bg-red-500" id="next" onclick="handleNext(this)">Tiếp theo</button>
+            <button type="submit" id="start" class=" rounded-full bg-red-600 lg:px-40 max-md:w-full max-md:mt-10 text-lg py-2 text-white hover:bg-red-500" onclick="handleStart(this)">Bắt đầu</button>
+            <button type="submit" id="continue_1" class="hidden rounded-full bg-red-600 lg:px-40 max-md:w-full max-md:mt-10 text-lg py-2 text-white hover:bg-red-500" onclick="handleContinue_1(this)">Tiếp tục Test Mong muốn</button>
+            <button type="submit" id="continue_2" class="hidden rounded-full bg-red-600 lg:px-40 max-md:w-full max-md:mt-10 text-lg py-2 text-white hover:bg-red-500" onclick="handleContinue_2(this)">Tiếp tục test Language Love</button>
+            <button type="submit" id="next_1" class="hidden rounded-full bg-red-600 lg:px-40 max-md:w-full max-md:mt-10 text-lg py-2 text-white hover:bg-red-500" onclick="handleNext_1(this)">Tiếp theo</button>
+            <button type="submit" id="next_2" class="hidden rounded-full bg-red-600 lg:px-40 max-md:w-full max-md:mt-10 text-lg py-2 text-white hover:bg-red-500" onclick="handleNext_2(this)">Tiếp theo</button>
+            </form>
             </div>
 
-            <!-- options 2 -->
-            <div class="">
-                <h2 class="pt-4 lg:text-3xl lg:font-bold text-gray-700">2. Tự do, phóng khoáng / Hiệu quả, hệ thống</h2>
-                <div class="pl-6 py-4">
-                    <label for="correct_2_1" class="lg:text-lg">
-                        <strong class="px-2">2.1</strong> Bạn thường lên kế hoạch dự phòng cho một kế hoạch dự phòng khác.
-                    </label>
-                    <div class="flex items-center pl-4">
-                        <input type="radio" name="answer_2_1" class="block text-lg larger-radio" id="correct_2_1">
-                        <label for="correct_2_1" class="text-lg px-4">Đúng</label>
-                    </div>
-                    <div class="flex items-center pl-4">
-                        <input type="radio" name="answer_2_1" class="block text-xl larger-radio" id="wrong_2_1">
-                        <label for="wrong_2_1" class="text-lg px-4">Sai</label>
-                    </div>
-                </div>
-                <div class="pl-6 py-4">
-                    <label for="correct_2_2" class="lg:text-lg">
-                        <strong class="px-2">2.2</strong> Bạn thường chỉ làm những gì bạn muốn làm vào bất kỳ thời điểm nào thay vì lập ra một thói quen hằng ngày cụ thể.
-                    </label>
-                    <div class="flex items-center pl-4">
-                        <input type="radio" name="answer_2_2" class="block text-lg larger-radio" id="correct_2_2">
-                        <label for="correct_2_2" class="text-lg px-4">Đúng</label>
-                    </div>
-                    <div class="flex items-center pl-4">
-                        <input type="radio" name="answer_2_2" class="block text-xl larger-radio" id="wrong_2_2">
-                        <label for="wrong_2_2" class="text-lg px-4">Sai</label>
-                    </div>
-                </div>
-                <div class="pl-6 py-4">
-                    <label for="correct_2_3" class="lg:text-lg">
-                        <strong class="px-2">2.3</strong> Bạn nghĩ rằng thế giới sẽ trở thành một nơi tốt đẹp hơn nếu mọi người tập trung vào lẽ phải hơn là cảm xúc của họ
-                    </label>
-                    <div class="flex items-center pl-4">
-                        <input type="radio" name="answer_2_3" class="block text-lg larger-radio" id="correct_2_3">
-                        <label for="correct_2_3" class="text-lg px-4">Đúng</label>
-                    </div>
-                    <div class="flex items-center pl-4">
-                        <input type="radio" name="answer_2_3" class="block text-xl larger-radio" id="wrong_2_3">
-                        <label for="wrong_2_3" class="text-lg px-4">Sai</label>
-                    </div>
-                </div>
-                <div class="pl-6 py-4">
-                    <label for="correct_2_4" class="lg:text-lg">
-                        <strong class="px-2">2.4</strong> Phong cách làm việc của cá nhân bạn giống với nỗ lực bền bỉ, có tổ chức hơn là tùy hứng.
-                    </label>
-                    <div class="flex items-center pl-4">
-                        <input type="radio" name="answer_2_4" class="block text-lg larger-radio" id="correct_2_4">
-                        <label for="correct_2_4" class="text-lg px-4">Đúng</label>
-                    </div>
-                    <div class="flex items-center pl-4">
-                        <input type="radio" name="answer_2_4" class="block text-xl larger-radio" id="wrong_2_4">
-                        <label for="wrong_2_4" class="text-lg px-4">Sai</label>
-                    </div>
-                </div>
-            </div>
 
-            <!-- options 3 -->
-            <div class="">
-                <h2 class="pt-4 lg:text-3xl lg:font-bold text-gray-700">3. Đơn độc, kín đáo / Hòa đồng, mạnh mẽ</h2>
-                <div class="pl-6 py-4">
-                    <label for="correct_3_1" class="lg:text-lg">
-                        <strong class="px-2">3.1</strong> Bạn thường xuyên kết bạn mới.
-                    </label>
-                    <div class="flex items-center pl-4">
-                        <input type="radio" name="answer_3_1" class="block text-lg larger-radio" id="correct_3_1">
-                        <label for="correct_3_1" class="text-lg px-4">Đúng</label>
-                    </div>
-                    <div class="flex items-center pl-4">
-                        <input type="radio" name="answer_3_1" class="block text-xl larger-radio" id="wrong_3_1">
-                        <label for="wrong_3_1" class="text-lg px-4">Sai</label>
-                    </div>
-                </div>
-                <div class="pl-6 py-4">
-                    <label for="correct_3_2" class="lg:text-lg">
-                        <strong class="px-2">3.2</strong> Bạn cảm thấy khá thoải mái khi tiến tới và bắt chuyện với một ai đó mà bạn cho là thú vị.
-                    </label>
-                    <div class="flex items-center pl-4">
-                        <input type="radio" name="answer_3_2" class="block text-lg larger-radio" id="correct_3_2">
-                        <label for="correct_3_2" class="text-lg px-4">Đúng</label>
-                    </div>
-                    <div class="flex items-center pl-4">
-                        <input type="radio" name="answer_3_2" class="block text-xl larger-radio" id="wrong_3_2">
-                        <label for="wrong_3_2" class="text-lg px-4">Sai</label>
-                    </div>
-                </div>
-                <div class="pl-6 py-4">
-                    <label for="correct_3_3" class="lg:text-lg">
-                        <strong class="px-2">3.3</strong> Bạn thích tham gia các hoạt động nhóm.
-                    </label>
-                    <div class="flex items-center pl-4">
-                        <input type="radio" name="answer_3_3" class="block text-lg larger-radio" id="correct_3_3">
-                        <label for="correct_3_3" class="text-lg px-4">Đúng</label>
-                    </div>
-                    <div class="flex items-center pl-4">
-                        <input type="radio" name="answer_3_3" class="block text-xl larger-radio" id="wrong_3_3">
-                        <label for="wrong_3_3" class="text-lg px-4">Sai</label>
-                    </div>
-                </div>
-                <div class="pl-6 py-4">
-                    <label for="correct_3_4" class="lg:text-lg">
-                        <strong class="px-2">3.4</strong> Sau một tuần dài và mệt mỏi, những gì bạn cần chính là một bữa tiệc sôi động.
-                    </label>
-                    <div class="flex items-center pl-4">
-                        <input type="radio" name="answer_3_4" class="block text-lg larger-radio" id="correct_3_4">
-                        <label for="correct_3_4" class="text-lg px-4">Đúng</label>
-                    </div>
-                    <div class="flex items-center pl-4">
-                        <input type="radio" name="answer_3_4" class="block text-xl larger-radio" id="wrong_3_4">
-                        <label for="wrong_3_4" class="text-lg px-4">Sai</label>
-                    </div>
-                </div>
-                <div class="pl-6 py-4">
-                    <label for="correct_3_5" class="lg:text-lg">
-                        <strong class="px-2">3.5</strong> Bạn bị thu hút bởi những nơi có không khí nhộn nhịp, tấp nập hơn là những nơi yên ắng, kín đáo.
-                    </label>
-                    <div class="flex items-center pl-4">
-                        <input type="radio" name="answer_3_5" class="block text-lg larger-radio" id="correct_3_5">
-                        <label for="correct_3_5" class="text-lg px-4">Đúng</label>
-                    </div>
-                    <div class="flex items-center pl-4">
-                        <input type="radio" name="answer_3_5" class="block text-xl larger-radio" id="wrong_3_5">
-                        <label for="wrong_3_5" class="text-lg px-4">Sai</label>
-                    </div>
-                </div>
-            </div>
 
-            <!-- options 4 -->
-            <div class="">
-            <h2 class="pt-4 lg:text-3xl lg:font-bold text-gray-700">4. Vững chắc, tự tin / Nhạy cảm, hoảng sợ</h2>
-            <div class="pl-6 py-4">
-                <label for="wrong_4_1" class="lg:text-lg">
-                    <strong class="px-2">4.1</strong> Nhìn thấy người khác khóc dễ khiến bạn muốn khóc theo
-                </label>
-                <div class="flex items-center pl-4">
-                    <input type="radio" name="answer_4_1" class="block text-lg larger-radio" id="wrong_4_1">
-                    <label for="wrong_4_1" class="text-lg px-4">Đúng</label>
-                </div>
-                <div class="flex items-center pl-4">
-                    <input type="radio" name="answer_4_1" class="block text-xl larger-radio" id="wrong_4_1_2">
-                    <label for="wrong_4_1_2" class="text-lg px-4">Sai</label>
-                </div>
-            </div>
-            <div class="pl-6 py-4">
-                <label for="wrong_4_2" class="lg:text-lg">
-                    <strong class="px-2">4.2</strong> Bạn có xu hướng lo lắng rằng mọi thứ sẽ trở nên tồi tệ hơn
-                </label>
-                <div class="flex items-center pl-4">
-                    <input type="radio" name="answer_4_2" class="block text-lg larger-radio" id="wrong_4_2">
-                    <label for="wrong_4_2" class="text-lg px-4">Đúng</label>
-                </div>
-                <div class="flex items-center pl-4">
-                    <input type="radio" name="answer_4_2" class="block text-xl larger-radio" id="wrong_4_2_2">
-                    <label for="wrong_4_2_2" class="text-lg px-4">Sai</label>
-                </div>
-            </div>
-            <div class="pl-6 py-4">
-                <label for="wrong_4_3" class="lg:text-lg">
-                    <strong class="px-2">4.3</strong> Bạn dễ đồng cảm với những người có trải nghiệm khác với mình.
-                </label>
-                <div class="flex items-center pl-4">
-                    <input type="radio" name="answer_4_3" class="block text-lg larger-radio" id="wrong_4_3">
-                    <label for="wrong_4_3" class="text-lg px-4">Đúng</label>
-                </div>
-                <div class="flex items-center pl-4">
-                    <input type="radio" name="answer_4_3" class="block text-xl larger-radio" id="wrong_4_3_2">
-                    <label for="wrong_4_3_2" class="text-lg px-4">Sai</label>
-                </div>
-            </div>
-            <div class="pl-6 py-4">
-                <label for="wrong_4_4" class="lg:text-lg">
-                    <strong class="px-2">4.4</strong> Bạn hay mất bình tĩnh và luôn cảm thấy áp lực.
-                </label>
-                <div class="flex items-center pl-4">
-                    <input type="radio" name="answer_4_4" class="block text-lg larger-radio" id="wrong_4_4">
-                    <label for="wrong_4_4" class="text-lg px-4">Đúng</label>
-                </div>
-                <div class="flex items-center pl-4">
-                    <input type="radio" name="answer_4_4" class="block text-xl larger-radio" id="wrong_4_4_2">
-                    <label for="wrong_4_4_2" class="text-lg px-4">Sai</label>
-                </div>
-            </div>
-            <div class="pl-6 py-4">
-                <label for="wrong_4_5" class="lg:text-lg">
-                    <strong class="px-2">4.5</strong> Bạn thường hay day dứt về những lỗi lầm mà bạn mắc phải đã từ rất lâu rồi.
-                </label>
-                <div class="flex items-center pl-4">
-                    <input type="radio" name="answer_4_5" class="block text-lg larger-radio" id="wrong_4_5">
-                    <label for="wrong_4_5" class="text-lg px-4">Đúng</label>
-                </div>
-                <div class="flex items-center pl-4">
-                    <input type="radio" name="answer_4_5" class="block text-xl larger-radio" id="wrong_4_5_2">
-                    <label for="wrong_4_5_2" class="text-lg px-4">Sai</label>
-                </div>
-            </div>
-        </div>
-
-            <button class="rounded-full bg-red-600 lg:px-40 max-md:w-full max-md:mt-10 text-lg py-2 text-white hover:bg-red-500">Gửi</button>
-            </div>
-            </div>
         <!-- message -->
     <button class="fixed bottom-2 right-3 rounded-full bg-red-500 text-white font-bold  px-7 py-2 text-2xl" onclick="handleShowMess()">
         Let`s Chat!
@@ -324,7 +105,7 @@
         </div>
         <div class="w-full flex items-center">
             <input type="text" class="w-full px-2 py-1 outline-none" placeholder="write your message....">
-            <svg class="mt-2 mr-4" viewBox="0 0 20 20" fill="currentColor" width="24px" height="16px"><path d="M10,0a10,10,0,1,0,9.85,8.26A10,10,0,0,0,10,0Zm0,19A9,9,0,1,1,18.87,8.44,9.11,9.11,0,0,1,19,10,9,9,0,0,1,10,19Zm4.23-6.88a4.5,4.5,0,0,1-8.72,0l1-.25a3.5,3.5,0,0,0,6.78,0ZM8,8A1,1,0,1,1,7,7,1,1,0,0,1,8,8Zm6,0a1,1,0,1,1-1-1A1,1,0,0,1,14,8Z"></path></svg>
+            <svg class="mt-2 mr-4" viewBox="0 0 20 20" fill="currentColor" width="24px" height="16px"><path d="M10,0a10,10,0,1,0,9.85,8.26A10,10,0,0,0,10,0Zm0,19A9,9,0,1,1,18.87,8.44,9.11,9.11,0,0,1,19,10,9,9,0,0,1,10,19Zm23-6.88a5,5,0,0,1-8.72,0l1-.25a5,5,0,0,0,6.78,0ZM8,8A1,1,0,1,1,7,7,1,1,0,0,1,8,8Zm6,0a1,1,0,1,1-1-1A1,1,0,0,1,14,8Z"></path></svg>
         </div>
     </div>
     <!-- footer -->
@@ -353,4 +134,666 @@
         </div>
     </footer>
 </body>
+<script>
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Ngăn chặn reload lại trang
+            // Thêm logic xử lý form ở đây
+            console.log("Form submitted!");
+        });
+    
+    var currentIndex =  0 
+    var currentIndex_1 =  0 
+    var currentIndex_2 =  0 
+   var listQuestion = [
+   {
+    "question_0": [
+     {
+        title:'Bạn dành rất nhiều thời gian rảnh vào việc tìm hiểu về các chủ đề ngẫu nhiên mà thu hút sự chú ý của bạn.',
+        correct: 'Đúng',
+        wrong:'Sai',
+    
+    },
+    {
+        title:'Bạn lúc nào cũng bị thu hút bởi những câu hỏi về điều gì, chẳng hạn như, điều gì sẽ xảy ra sau khi ta chết đi.',
+        correct: 'Đúng',
+        wrong:'Sai',
+    
+    },
+    {
+        title:'Bạn thường thấy nhàm chán hoặc mất hứng thú khi cuộc thảo luận bắt đầu có tính thuyết giáo.',
+        correct: 'Đúng',
+        wrong:'Sai',
+    
+    },
+
+    {
+        title:'Bạn thường dành nhiều thời gian để cố gắng hiểu những góc nhìn/quan điểm khác với bạn.',
+        correct: 'Đúng',
+        wrong:'Sai',
+    
+    },
+    ],
+    //2
+     "question_1": [
+    {
+        title:'Bạn thường lên kế hoạch dự phòng cho một kế hoạch dự phòng khác',
+        correct: 'Đúng',
+        wrong:'Sai',
+    
+    },
+    {
+        title:'Bạn muốn hoàn thành các công việc cần xử lý trước khi cho phép bản thân được nghỉ ngơi.',
+        correct: 'Đúng',
+        wrong:'Sai',
+    
+    },
+    {
+        title:'Bạn nghĩ rằng thế giới sẽ trở thành một nơi tốt đẹp hơn nếu mọi người tập trung vào lẽ phải hơn là cảm xúc của họ.',
+        correct: 'Đúng',
+        wrong:'Sai',
+    
+    },
+    {
+        title:'Phong cách làm việc của cá nhân bạn giống với nỗ lực bền bỉ, có tổ chức hơn là tùy hứng.',
+        correct: 'Đúng',
+        wrong:'Sai',
+    
+    },
+
+    ],
+    "question_2": [
+    {
+        title:'Bạn thường xuyên kết bạn mới.',
+        correct: 'Đúng',
+        wrong:'Sai',
+    
+    },
+    {
+        title:'Bạn cảm thấy khá thoải mái khi tiến tới và bắt chuyện với một ai đó mà bạn cho là thú vị.',
+        correct: 'Đúng',
+        wrong:'Sai',
+    
+    },
+    {
+        title:'Bạn thích tham gia các hoạt động nhóm.',
+        correct: 'Đúng',
+        wrong:'Sai',
+    
+    },
+    {
+        title:'Sau một tuần dài và mệt mỏi, những gì bạn cần chính là một bữa tiệc sôi động.',
+        correct: 'Đúng',
+        wrong:'Sai',
+    
+    },
+    {
+        title:'Bạn bị thu hút bởi những nơi có không khí nhộn nhịp, tấp nập hơn là những nơi yên ắng, kín đáo.',
+        correct: 'Đúng',
+        wrong:'Sai',
+    
+    },
+
+    ],
+    "question_3": [
+    {
+        title:'Nhìn thấy người khác khóc dễ khiến bạn muốn khóc theo',
+        correct: 'Đúng',
+        wrong:'Sai',
+    
+    },
+    {
+        title:'Bạn có xu hướng lo lắng rằng mọi thứ sẽ trở nên tồi tệ hơn.',
+        correct: 'Đúng',
+        wrong:'Sai',
+    
+    },
+    {
+        title:'Bạn dễ đồng cảm với những người có trải nghiệm khác với mình.',
+        correct: 'Đúng',
+        wrong:'Sai',
+    
+    },
+    {
+        title:'Bạn hay mất bình tĩnh và luôn cảm thấy áp lực. ',
+        correct: 'Đúng',
+        wrong:'Sai',
+    
+    },
+     {
+        title:'Bạn thường hay day dứt về những lỗi lầm mà bạn mắc phải đã từ rất lâu rồi.',
+        correct: 'Đúng',
+        wrong:'Sai',
+    
+    },
+
+    ],
+   }
+    ]
+    var listQuestion_1 = [
+         {
+        title:'Bạn cảm thấy thoải mái nhất khi',
+        A: 'Ở một mình, đọc sách hoặc xem phim',
+        B:'Đi dạo cùng một người bạn thân.',
+        C: ' Tham gia vào các hoạt động nhóm hoặc sự kiện xã hội.'
+    
+    },
+
+ {
+        title:'Sự độc lập và không gian cá nhân.',
+        A: 'Ở một mình, đọc sách hoặc xem phim',
+        B:' Sự chia sẻ và gắn kết tinh thần.',
+        C: ' Sự phát triển và mở rộng mối quan hệ.'
+    
+    },
+    
+     {
+        title:'Bạn cảm thấy hạnh phúc nhất khi:',
+        A: 'Có thời gian cho riêng mình để nghỉ ngơi và tái tạo năng lượng.',
+        B:'Dành thời gian chăm sóc và quan tâm đến người thân yêu.',
+        C: 'Cùng nhau vượt qua thách thức và chia sẻ những kỷ niệm đáng nhớ.'
+    
+    },
+    
+     {
+        title:'Trong mối quan hệ, bạn thích:',
+        A: 'Sự ổn định và sự kiểm soát.',
+        B:'Sự ngẫu hứng và sự sáng tạo.',
+        C: 'Sự tận hưởng và khám phá'
+    
+    },
+    
+     {
+        title:'Bạn cảm thấy bị thu hút nhất với người có đặc điểm sau:',
+        A: 'Tính cách kiên định và rõ ràng.',
+        B:'Tính cách ấm áp và hướng ngoại.',
+        C: 'Tính cách mạo hiểm và sáng tạo.'
+    
+    },
+    
+         {
+        title:'Chân thành và trung thực.',
+        A: ' Chân thành và trung thực',
+        B:'Sự đồng cảm và sẻ chia.',
+        C: 'Sự mới mẻ.'
+    
+    },
+    
+     {
+        title:'Khi xảy ra mâu thuẫn trong mối quan hệ, bạn thích giải quyết bằng cách:',
+        A: ' Thảo luận và tìm kiếm giải pháp hòa bình',
+        B:'Hiểu và chia sẻ cảm xúc của đối phương.',
+        C: 'Tìm cách thách thức và tạo ra sự đổi mới.'
+    
+    },
+    
+     {
+        title:'Bạn cảm thấy thú vị nhất khi:',
+        A: 'Tham gia vào các hoạt động thể chất và thể thao.',
+        B:'Thảo luận và chia sẻ quan điểm với người khác.',
+        C: 'Khám phá những nơi mới và trải nghiệm văn hóa khác nhau.'
+    
+    },
+     {
+        title:'Trong một mối quan hệ, bạn đánh giá cao:',
+        A: 'Sự ổn định và sự đáng tin cậy.',
+        B:'Sự linh hoạt và sự thay đổi.',
+        C: 'Sự tự do và sự độc lập.'
+    
+    },
+
+    
+    ];
+//2
+
+       var listQuestion_2 = [
+        {
+        title:'Đối với tôi, nó ý nghĩa hơn khi…',
+        A: 'Tôi nhận được những lời nhắn yêu thương không vì một lý do nào cả.',
+        B:'Tôi được bên cạnh người tôi yêu',
+        C: 'Người yêu tôi và tôi ôm nhau.',
+        D: ' Bất ngờ, tôi nhận được quà nhỏ từ người tôi yêu.'
+    
+        },
+{
+        title:'Đối với tôi, nó ý nghĩa hơn khi….',
+        A: 'Tôi có thời gian riêng tư với người yêu chỉ có hai chúng tôi mà thôi.',
+        B:' Tôi nghe người yêu tôi nới “Anh tự hào về em/ Em tự hào về anh.',
+        C: 'Người yêu tôi làm gì đó thực tế để giúp đỡ tôi.',
+        D:'Người yêu tôi giúp tôi làm một việc gì đó.'
+    
+    },
+      {
+        title:'Đối với tôi, nó ý nghĩa hơn khi….',
+        A: 'Người yêu tôi bất ngờ làm gì đó cho tôi chẳng hạn như đổ xăng xe hay giặt đồ.',
+        B:'Người yêu làm gì đó cho tôi thay vì chỉ nói về làm được những điều tốt đẹp.',
+        C: 'Tôi và người yêu có những cử chỉ âu yếm.',
+        D:'Tôi cảm thấy được gắn kết hơn với người yêu khichúng tôi ôm nhau.'
+    
+    },
+      {
+        title:'Đối với tôi, nó ý nghĩa hơn khi….',
+        A: 'Người tôi yêu choàng vai tôi khi chúng tôi ở nơi công cộng.',
+        B:'Tôi nghe người yêu khen tụng.',
+        C: ' Người tôi yêu ngạc nhiên tôi với một món quà.',
+        D:'Người tôi yêu tặng tôi vật gì đó để bày tỏ người ấy thực sự đang nghĩ về tôi.'
+    
+    },
+      {
+        title:'Đối với tôi, nó ý nghĩa hơn khi….',
+        A: 'Tôi ở bên người tôi yêu, thậm chí cả khichúng tôi chẳng phải làm gì.',
+        B:'Tôi có thể ở cạnh người yêu.',
+        C: 'Tôi và người tôi yêu tay trong tay.',
+        D:'Tôi được người yêu xoa lưng hoặc massa.'
+    
+    },
+    
+    {
+        title:'Đối với tôi, nó ý nghĩa hơn khi….',
+        A: 'Người yêu tôi phản ứng cách tích cực về việc gì đó mà tôi đã thực hiện',
+        B:'Người yêu tôi phản ứng cách tích cực về việc gì đómà tôi đã thực hiện',
+        C: 'Tôi nghe người yêu tôi nói “Anh yêu em/ Em yêu anh.',
+        D:'Người yêu tôi làm gì đó cho tôi mà tôi biết rằng người ta chẳng thích thú gì.'
+    
+    },
+      {
+        title:'Đối với tôi, nó ý nghĩa hơn khi….',
+        A: 'Tôi ngồi gần người tôi yêu',
+        B:'Người yêu tôi và tôi thường xuyên hôn nhau.',
+        C: 'Tôi được người yêu khen chẳng vì lý do gì.',
+        D:'Tôi cảm nhận được rằng người yêu tôi tỏ ra thực sự hứng thú với điều mà tôi quan tâm.'
+    
+    },
+      {
+        title:'Đối với tôi, nó ý nghĩa hơn khi….',
+        A: 'Người yêu tôi cùng với tôi làm một dự án mà tôi phải hoàn thành.',
+        B:'Người yêu tôi không ngắt quãng, chen ngang khi tôi đang nói.',
+        C: 'Người yêu tôi tặng tôi món quà thú vị',
+        D:'Tặng quà là một phần quan trọng trong mối quan hệ của chúng tôi.'
+    
+     },
+      {
+        title:'Đối với tôi, nó ý nghĩa hơn khi….',
+        A: 'Người yêu tôi khen tôi dáng vẻ của tôi.',
+        B:'Người yêu tôi giúp đỡ tôi khi anh/cô ấy biết tôiđang mệt mỏi.',
+        C: 'Người yêu tôi dành thời gian để lắng nghetôi và thực sự hiểu cảm nhận của tôi.',
+        D:'Tôi phải đi đâu đó khi chúng tôi đang ở bên nhau.'
+    
+    }, 
+    {
+        title:'Đối với tôi, nó ý nghĩa hơn khi….',
+        A: ' Tôi và người tôi yêu có những cử chỉ âu yếm phi tình dục nơi công cộng.',
+        B:'Người yêu tôi và tôi thân mật về thể xác.',
+        C: ' Người tôi yêu sẵn lòng đi mua những thứ lặt vặt tôi cần',
+        D:'Người yêu tôi tặng tôi một món quà nhỏ mà anh/cô ấy lựa vào một ngày bình thường'
+    
+    },
+    
+    ]
+    var start  = document.getElementById('start')
+    var continue_1  = document.getElementById('continue_1')
+    var continue_2  = document.getElementById('continue_2')
+    var next  = document.getElementById('next')
+    var send  = document.getElementById('send')
+    var next_1  = document.getElementById('next_1')
+    var next_2  = document.getElementById('next_2')
+    var previus  = document.getElementById('previus')
+    // Tìm phần tử cha cần thêm các phần tử con vào
+function handleStart(e){
+    let question = document.getElementById('option_0');
+    let key = `question_${currentIndex}`
+// Lặp qua mảng các câu hỏi
+listQuestion[0][key].forEach((item, index) => {
+    // Tạo phần tử div cho mỗi câu hỏi
+    const child_1 = document.createElement('div');
+    child_1.classList.add('pl-6', 'py-4');
+
+    // Tạo label cho câu hỏi
+    const label = document.createElement('label');
+    label.classList.add('lg:text-xl', 'flex', 'items-center');
+    const strongInlabel = document.createElement('strong');
+    strongInlabel.classList.add('pr-1', 'text-lg');
+    strongInlabel.innerHTML = index +1;
+    label.appendChild(strongInlabel);
+    label.innerHTML += item.title;
+    child_1.appendChild(label);
+
+    // Tạo input và label cho đáp án "Đúng"
+    const div1 = document.createElement('div');
+    div1.classList.add('flex', 'items-center', 'pl-4');
+    const div1_input = document.createElement('input');
+    div1_input.setAttribute('type', 'radio');
+    div1_input.setAttribute('required', '');
+    div1_input.setAttribute('name', `answer_${index }_1`);
+    div1_input.setAttribute('class', 'block text-lg larger-radio');
+    div1_input.setAttribute('id', `correct_${index }_1`);
+    const div1_label = document.createElement('label');
+    div1_label.setAttribute('for', `correct_${index}_1`);
+    div1_label.setAttribute('class', 'text-lg px-4');
+    div1_label.innerHTML = 'Đúng';
+    div1.appendChild(div1_input);
+    div1.appendChild(div1_label);
+    child_1.appendChild(div1);
+
+    // Tạo input và label cho đáp án "Sai"
+    const div2 = document.createElement('div');
+    div2.classList.add('flex', 'items-center', 'pl-4');
+    const div2_input = document.createElement('input');
+    div2_input.setAttribute('type', 'radio');
+    div2_input.setAttribute('required', '');
+    div2_input.setAttribute('name', `answer_${index }_1`);
+    div2_input.setAttribute('class', 'block text-xl larger-radio');
+    div2_input.setAttribute('id', `wrong_${index}_1`);
+    const div2_label = document.createElement('label');
+    div2_label.setAttribute('for', `wrong_${index}_1`);
+    div2_label.setAttribute('class', 'text-lg px-4');
+    div2_label.innerHTML = 'Sai';
+    div2.appendChild(div2_input);
+    div2.appendChild(div2_label);
+    child_1.appendChild(div2);
+
+    // Thêm phần tử div vào phần tử cha
+    question.appendChild(child_1);
+    start.remove()
+    next.classList.remove('hidden')
+});
+
+}
+
+    function handleShowMess() {}
+    function handleClose() {}
+    const checkFormCompletion = () => {
+    let allOptionsSelected = true;
+    let currentQuestionOptions = listQuestion[0][`question_${currentIndex}`];
+    currentQuestionOptions.forEach((item, index) => {
+        let correctOption = document.getElementById(`correct_${index}_1`);
+        let wrongOption = document.getElementById(`wrong_${index}_1`);
+        if (!correctOption.checked && !wrongOption.checked) {
+            allOptionsSelected = false;
+            return;
+        }
+    });
+    return allOptionsSelected;
+};
+
+
+   const handleNext =(e)=> {
+    if(currentIndex == 4) return;
+    if (!checkFormCompletion()) {
+        return
+    }
+    let question_old = document.getElementById(`option_${currentIndex}`);
+    question_old.classList.add('hidden');
+        
+    currentIndex +=1;
+    let key = `question_${currentIndex}`
+    let key_old =`question_${currentIndex -1}`
+    let question = document.getElementById(`option_${currentIndex}`)
+// Lặp qua mảng các câu hỏi
+listQuestion[0][key].forEach((item, index) => {
+    // Tạo phần tử div cho mỗi câu hỏi
+    const child_1 = document.createElement('div');
+    child_1.classList.add('pl-6', 'py-4');
+
+    // Tạo label cho câu hỏi
+    const label = document.createElement('label');
+    const div1 = document.createElement('div');
+    const div1_input = document.createElement('input');
+    const strongInlabel = document.createElement('strong');
+    const div2_label = document.createElement('label');
+    const div2_input = document.createElement('input');
+    const div2 = document.createElement('div');
+    const div1_label = document.createElement('label');
+    label.classList.add('lg:text-xl', 'flex', 'items-center');
+    strongInlabel.classList.add('pr-1', 'text-lg');
+    if (currentIndex == 1) {
+        strongInlabel.innerHTML =   listQuestion[0][key_old].length +index +1
+    }
+    else if(currentIndex >1){
+        strongInlabel.innerHTML =   listQuestion[0][key_old].length +listQuestion[0][key].length +index +1
+    }
+    label.appendChild(strongInlabel);
+    label.innerHTML += item.title;
+    child_1.appendChild(label);
+    
+    // Tạo input và label cho đáp án "Đúng"
+    div1.classList.add('flex', 'items-center', 'pl-4');
+    div1_input.setAttribute('type', 'radio');
+    div1_input.setAttribute('required', '');
+    div1_input.setAttribute('class', 'block text-lg larger-radio');
+    
+    div1_label.setAttribute('class', 'text-lg px-4');
+    div1_label.innerHTML = 'Đúng';
+    // check 
+    if(currentIndex == 1){
+        const current_index = listQuestion[0][key_old].length +index +1
+        // dung
+        div1_input.setAttribute('name', `answer_${current_index}_1`);
+        div1_input.setAttribute('id', `correct_${current_index}_1`);
+        div1_label.setAttribute('for', `correct_${current_index}_1`);
+        // sai
+        
+        div2_input.setAttribute('name', `answer_${current_index}_1`);
+        div2_input.setAttribute('id', `wrong_${current_index}_1`);
+        div2_label.setAttribute('for', `wrong_${current_index}_1`);
+    }
+    else if(currentIndex > 1) {
+        const current_index = listQuestion[0][key_old].length +listQuestion[0][key].length +index +1
+        div1_input.setAttribute('name', `answer_${current_index}_1`);
+        div1_input.setAttribute('id', `correct_${current_index}_1`);
+        div1_label.setAttribute('for', `correct_${current_index}_1`);
+        // sai
+        
+        div2_input.setAttribute('name', `answer_${current_index}_1`);
+        div2_input.setAttribute('id', `wrong_${current_index}_1`);
+        div2_label.setAttribute('for', `wrong_${current_index}_1`);
+    }
+    // Tạo input và label cho đáp án "Sai"
+    div2.classList.add('flex', 'items-center', 'pl-4');
+    div2_input.setAttribute('type', 'radio');
+    div2_input.setAttribute('required', '');
+
+    div2_input.setAttribute('class', 'block text-xl larger-radio');
+    div2_label.setAttribute('class', 'text-lg px-4');
+    div1.appendChild(div1_input);
+    div1.appendChild(div1_label);
+    child_1.appendChild(div1);
+    div2_label.innerHTML = 'Sai';
+    div2.appendChild(div2_input);
+    div2.appendChild(div2_label);
+    child_1.appendChild(div2);
+    
+    // Thêm phần tử div vào phần tử cha
+    question.appendChild(child_1);
+    start.remove()
+    next.classList.remove('hidden')
+    console.log(currentIndex)
+    if(currentIndex == 2) {
+        next.classList.add('hidden')
+        continue_1.classList.remove('hidden')
+    }
+});
+}
+var title_test = document.getElementById('title_test')
+const handleContinue_1 = () => {
+    let question_old = document.getElementById('option_2');
+    question_old.classList.add('hidden')
+    title_test.innerHTML = 'Test Mong muốn';
+    let question = document.getElementById('option_3');;
+    // Lặp qua mảng các câu hỏi
+    listQuestion_1.forEach((item, index) => {
+        // Tạo phần tử div cho mỗi câu hỏi
+        const child_1 = document.createElement('div');
+        child_1.classList.add('pl-6', 'py-4');
+        // Tạo label cho câu hỏi
+        const label = document.createElement('label');
+        label.classList.add('lg:text-xl', 'flex', 'items-center');
+        const strongInlabel = document.createElement('strong');
+        strongInlabel.classList.add('pr-1', 'text-lg');
+        strongInlabel.innerHTML = index + 1;
+        label.appendChild(strongInlabel);
+        label.innerHTML += item.title;
+        child_1.appendChild(label);
+
+        // Tạo input và label cho đáp án "Đúng"
+        const div1 = document.createElement('div');
+        div1.classList.add('flex', 'items-center', 'pl-4');
+        const div1_input = document.createElement('input');
+        div1_input.setAttribute('type', 'radio');
+        div1_input.setAttribute('required', '');
+        div1_input.setAttribute('name', `answer_${index}_1`);
+        div1_input.setAttribute('class', 'block text-lg larger-radio');
+        div1_input.setAttribute('id', `correct_${index}_1`);
+        const div1_label = document.createElement('label');
+        div1_label.setAttribute('for', `correct_${index}_1`);
+        div1_label.setAttribute('class', 'text-lg px-4');
+        div1_label.innerHTML = item.A;
+        div1.appendChild(div1_input);
+        div1.appendChild(div1_label);
+        child_1.appendChild(div1);
+
+        // Tạo input và label cho đáp án "Sai"
+        const div2 = document.createElement('div');
+        div2.classList.add('flex', 'items-center', 'pl-4');
+        const div2_input = document.createElement('input');
+        div2_input.setAttribute('type', 'radio');
+        div2_input.setAttribute('required', '');
+        div2_input.setAttribute('name', `answer_${index}_1`);
+        div2_input.setAttribute('class', 'block text-xl larger-radio');
+        div2_input.setAttribute('id', `wrong_${index}_1`);
+        const div2_label = document.createElement('label');
+        div2_label.setAttribute('for', `wrong_${index}_1`);
+        div2_label.setAttribute('class', 'text-lg px-4');
+        
+        div2_label.innerHTML = item.B;
+        div2.appendChild(div2_input);
+        div2.appendChild(div2_label);
+        child_1.appendChild(div2);
+
+        const div3 = document.createElement('div');
+        div3.classList.add('flex', 'items-center', 'pl-4');
+        const div3_input = document.createElement('input');
+        div3_input.setAttribute('type', 'radio');
+        div3_input.setAttribute('required', '');
+        div3_input.setAttribute('name', `answer_${index}_1`);
+        div3_input.setAttribute('class', 'block text-xl larger-radio');
+        div3_input.setAttribute('id', `wrong_${index}_1`);
+        const div3_label = document.createElement('label');
+        div3_label.setAttribute('for', `wrong_${index}_1`);
+        div3_label.setAttribute('class', 'text-xl px-4');
+        div2_label.innerHTML = item.C;
+        div2.appendChild(div2_input);
+        div2.appendChild(div2_label);
+        child_1.appendChild(div2);
+
+        // Thêm phần tử div vào phần tử cha
+        question.appendChild(child_1);
+        start.remove();
+       
+        continue_1.classList.add('hidden')
+        continue_2.classList.remove('hidden')
+    
+    });
+};
+
+const handleContinue_2 =()=>{
+    title_test.innerHTML = 'Test Tình Yêu'
+    let question_old = document.getElementById('option_3');
+    question_old.classList.add('hidden')
+    let question = document.getElementById('option_4');;
+    // Lặp qua mảng các câu hỏi
+    listQuestion_2.forEach((item, index) => {
+        // Tạo phần tử div cho mỗi câu hỏi
+        const child_1 = document.createElement('div');
+        child_1.classList.add('pl-6', 'py-4');
+        // Tạo label cho câu hỏi
+        const label = document.createElement('label');
+        label.classList.add('lg:text-xl', 'flex', 'items-center');
+        const strongInlabel = document.createElement('strong');
+        strongInlabel.classList.add('pr-1', 'text-lg');
+        strongInlabel.innerHTML = index + 1;
+        label.appendChild(strongInlabel);
+        label.innerHTML += item.title;
+        child_1.appendChild(label);
+
+        // Tạo input và label cho đáp án "Đúng"
+        const div1 = document.createElement('div');
+        div1.classList.add('flex', 'items-center', 'pl-4');
+        const div1_input = document.createElement('input');
+        div1_input.setAttribute('type', 'radio');
+        div1_input.setAttribute('required', '');
+        div1_input.setAttribute('name', `answer_${index}_1`);
+        div1_input.setAttribute('class', 'block text-lg larger-radio');
+        div1_input.setAttribute('id', `correct_${index}_1`);
+        const div1_label = document.createElement('label');
+        div1_label.setAttribute('for', `correct_${index}_1`);
+        div1_label.setAttribute('class', 'text-xl px-4');
+        div1_label.innerHTML = item.A;
+        div1.appendChild(div1_input);
+        div1.appendChild(div1_label);
+        child_1.appendChild(div1);
+
+        // Tạo input và label cho đáp án "Sai"
+        const div2 = document.createElement('div');
+        div2.classList.add('flex', 'items-center', 'pl-4');
+        const div2_input = document.createElement('input');
+        div2_input.setAttribute('type', 'radio');
+        div2_input.setAttribute('required', '');
+        div2_input.setAttribute('name', `answer_${index}_1`);
+        div2_input.setAttribute('class', 'block text-xl larger-radio');
+        div2_input.setAttribute('id', `wrong_${index}_1`);
+        const div2_label = document.createElement('label');
+        div2_label.setAttribute('for', `wrong_${index}_1`);
+        div2_label.setAttribute('class', 'text-lg px-4');
+        
+        div2_label.innerHTML = item.B;
+        div2.appendChild(div2_input);
+        div2.appendChild(div2_label);
+        child_1.appendChild(div2);
+
+        const div3 = document.createElement('div');
+        div3.classList.add('flex', 'items-center', 'pl-4');
+        const div3_input = document.createElement('input');
+        div3_input.setAttribute('type', 'radio');
+        div3_input.setAttribute('required', '');
+        div3_input.setAttribute('name', `answer_${index}_1`);
+        div3_input.setAttribute('class', 'block text-xl larger-radio');
+        div3_input.setAttribute('id', `wrong_${index}_1`);
+        const div3_label = document.createElement('label');
+        div3_label.setAttribute('for', `wrong_${index}_1`);
+        div3_label.setAttribute('class', 'text-lg px-4');
+        div3_label.innerHTML = item.C;
+        div3.appendChild(div3_input);
+        div3.appendChild(div3_label);
+        child_1.appendChild(div3);
+const div4 = document.createElement('div');
+        div4.classList.add('flex', 'items-center', 'pl-4');
+        const div4_input = document.createElement('input');
+        div4_input.setAttribute('type', 'radio');
+        div4_input.setAttribute('required', '');
+        div4_input.setAttribute('name', `answer_${index}_1`);
+        div4_input.setAttribute('class', 'block text-xl larger-radio');
+        div4_input.setAttribute('id', `wrong_${index}_1`);
+        const div4_label = document.createElement('label');
+        div4_label.setAttribute('for', `wrong_${index}_1`);
+        div4_label.setAttribute('class', 'text-lg px-4');
+        div4_label.innerHTML = item.D;
+        div4.appendChild(div4_input);
+        div4.appendChild(div4_label);
+        child_1.appendChild(div4);
+        // Thêm phần tử div vào phần tử cha
+        question.appendChild(child_1);
+        start.remove();
+       
+        continue_2.classList.add('hidden')
+        send.classList.remove('hidden')
+        
+    });
+}
+ const handleSend =()=>{
+
+ }
+
+</script>
+<script src="./javascript/main.js"> 
+</script>
 </html>

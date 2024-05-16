@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Đăng kí</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./fontawesome-free-6.5.2-web/css/all.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="./main.css">
 </head>
 <body>
  <header class="fixed top-0 left-0  right-0 z-20">
@@ -19,7 +19,7 @@
                 Heartlink</p>
            </a>   
            </div>
-           <div class="bg-red-500 px-6 py-6 text-white flex items-center">
+           <div class="bg-red-500 px-6 py-2 text-white flex items-center">
             <ul class=" bg-slate-100 text-gray-600  rounded-full list-none max-md:px-1 flex items-center max-md:overflow-x-scroll whitespace-norwap" id="route_link">
                 <a href="/home.html" class="px-2 py-1 font-bold text-base whitespace-nowrap">Trang chủ</a>
                 <a href="/personalityTest.html" class="px-4 py-1 font-bold text-base whitespace-nowrap">Test tính cách</a>
@@ -39,7 +39,7 @@
     </header>
     <div class="container mt-[14rem] mx-auto max-md:w-full  w-[40rem]" id="container">
         <div class=" w-full  ">
-            <form class="loginForm  w-full" method="post">
+            <form class="loginForm  w-full" id="register">
                 <h1 class="text-xl py-2 font-bold">Đăng Kí</h1>
                 <span> Nhập tên người dùng và mật khẩu.</span>
                 <div class="w-full">
@@ -90,30 +90,43 @@
             <svg class="mt-2 mr-4" viewBox="0 0 20 20" fill="currentColor" width="24px" height="16px"><path d="M10,0a10,10,0,1,0,9.85,8.26A10,10,0,0,0,10,0Zm0,19A9,9,0,1,1,18.87,8.44,9.11,9.11,0,0,1,19,10,9,9,0,0,1,10,19Zm4.23-6.88a4.5,4.5,0,0,1-8.72,0l1-.25a3.5,3.5,0,0,0,6.78,0ZM8,8A1,1,0,1,1,7,7,1,1,0,0,1,8,8Zm6,0a1,1,0,1,1-1-1A1,1,0,0,1,14,8Z"></path></svg>
         </div>
     </div>
-<footer class="mt-10  w-full text-white bg-[#EF0D4A] px-20 border-t border-white shadow-lg">
-        <p class=" text-2xl mb-2 font-bold pt-10">
-            HeartLink
-        </p>
-        <div class="">
-            <div class="flex items-center  max-md:flex-col justify-between">
-                <p class="text-white ">
-            123-456-7890
-            <span class="block leading-5">
-                heartlinkxinchao@gmail.com
-            </span>
-            </p>
-            <p>
-            279 Nguyễn Tri Phương, Phường 5, Quận 10, TPHCM
-            </p>
+<footer class="shadow text-left p-4 bg-slate-100">
 
-            </div>
-            <div class="flex items-center">
-                <img src="./imgs//icons/facebook.png" class="px-2  text-white py-2" alt="">
-                <img src="./imgs//icons/ista.png" class="px-2  text-white py-2" alt="">
-                <img src="./imgs//icons/youtube.png" class="px-2  text-white py-2" alt="">
-            </div>
+        <p class="text-3xl py-2 text-black font-bold">Tư vấn trực <br> tiếp tại:</p>
+        <div class="text-left py-6 text-slate-800">
+            <p>279 Nguyễn tri phương</p>
+            <p>Phường 5, Quận 10 ,TP HCM</p>
+            <p>heartlink@gmail.com</p>
+            <p>SDT:024 3456 7890</p>
+        </div>
+        <div class="flex items-center text-slate-800 ">
+            <i class="fa-brands px-2.5 hover:text-blue-600 cursor-pointer text-3xl fa-instagram"></i>
+            <i class="fa-brands px-2.5 hover:text-blue-600 cursor-pointer text-3xl fa-facebook"></i>
+            <i class="fa-brands px-2.5 hover:text-blue-600 cursor-pointer text-3xl fa-twitter"></i>
         </div>
     </footer>
 
 </body>
+<script >
+    const register = document.getElementById('register')
+    const login = document.getElementById('login')
+    const loggedin = document.getElementById('loggedin')
+    const handle = JSON.parse(localStorage.getItem('login'))
+    if(handle){
+        register.classList.add('hidden')
+        login.classList.add('hidden')
+        loggedin.classList.remove('hidden')
+    }
+    document.getElementById("register").addEventListener("submit", (e) => {
+  e.preventDefault();
+  let username = document.getElementById("username");
+  let password = document.getElementById("password");
+  let rePassword = document.getElementById("repassword");
+  if (password.value != rePassword.value) {
+    alert("mật khẩu không khớp!");
+    return;
+  }
+  window.location.href = "/login.html";
+});
+</script>
 </html>

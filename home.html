@@ -6,6 +6,9 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./fontawesome-free-6.5.2-web/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
+
 </head>
 <body>
     <!-- header -->
@@ -17,7 +20,7 @@
                 Heartlink</p>
            </a>   
            </div>
-           <div class="bg-red-500 px-6 py-6 text-white flex items-center">
+           <div class="bg-red-500 px-6 py-2 text-white flex items-center">
             <ul class=" bg-slate-100 text-gray-600  rounded-full list-none max-md:px-1 flex items-center max-md:overflow-x-scroll whitespace-norwap" id="route_link">
                 <a href="/home.html" class="px-2 py-1 font-bold text-base whitespace-nowrap">Trang chủ</a>
                 <a href="/personalityTest.html" class="px-4 py-1 font-bold text-base whitespace-nowrap">Test tính cách</a>
@@ -27,11 +30,21 @@
                 <a href="/login.html" class="px-4 py-1 font-bold text-base whitespace-nowrap hidden max-md:block">Đăng nhập</a>
                 <a href="/register.html" class="px-4 py-1 font-bold text-base whitespace-nowrap hidden max-md:block">Đăng kí</a>
             </ul>
-            <a class="ml-auto px-4 text-lg font-bold text white block max-md:hidden" href="./register.html">
+            <a class="ml-auto px-4 text-lg font-bold text white block max-md:hidden" id="register" href="./register.html">
                 Đăng kí</a>
 
-                 <a class="px-4 text-lg font-bold text white block max-md:hidden" href="/login.html">
+                 <a class="px-4 text-lg font-bold text white block max-md:hidden" id="login" href="/login.html">
                 Đăng nhập</a>
+                <div class="hidden ml-auto text-lg relative" id="loggedin">
+                    <div class="flex items-center">
+                        <img src="./imgs/icons/user-img.png" class="px-2 w-14" alt=""> user
+                    </div>
+                    <div class="avsolute top-full  w-full shadow bg-white right-0 px-4 py-0.5">
+                        <button class="text-gray-700"  onclick="handleLogout()">
+                        Đăng Xuất
+                    </button>
+                </div>
+                </div>
            </div>
 
     </header>
@@ -45,49 +58,30 @@
                     Chào mừng <br> đến với <br>Heartlink
                 </h2>
                 <p class="text-center leading-7">
-                    Tại Heartlink, chúng tôi đam mê xây dựng các sản phẩm đột phá mới sẽ làm thay đổi ngành công nghiệp. Từ năm 2000, chúng tôi cung cấp dịch vụ chất lượng cao cho tất cả các khách hàng của chúng tôi và khi chúng tôi phát triển, cam kết của chúng tôi đối với nhu cầu của bạn vẫn là động lực chính đằng sau Công ty công nghệ của chúng tôi. Đội ngũ chuyên nghiệp của chúng tôi ở đây để truyền cảm hứng cho bạn bằng các ý tưởng và khả năng độc đáo của họ - hãy liên hệ với chúng tôi ngay hôm nay để biết thêm thông tin.
+                    Dịch vụ mai mối cho khách hàng tới những mối quan hệ nghiêm túc, uy tín và an toàn. Với heartlink trăm ngàn tin nhắn kh bằng một lần gặp mặt, và tình yêu chỉ đến khi chúng ta tự nhìn thấy, sờ thấy và cảm nhận thấy thông qua đôi mắt cũng như là cảm xúc lúc gặp gỡ nhau. Để xây dựng được giá trị cho sứ mệnh ấy đội ngũ công ty Heartlink không ngừng xây dựng và cải tiến để đem đến một gói dịch vụ tới nhóm khách hàng chính của mình. Bao gồm quy trình công nghệ sàn lọc hồ sơ kĩ càng để đảm bảo tính chính xác của thông tin cũng như bộ câu hỏi test tính cách chuyên sâu được các chuyên gia tâm lý tình yêu và hôn nhân xây dựng sẽ giúp chúng tôi phân tích và xác định được người phù hợp với bạn nhất về khía cạnh bên trong lẫn bên ngoài.
                 </p>
                 <button class="py-2  rounded-full mt-5 text-white text-lg font-bold bg-red-600 hover:bg-red-500">Tìm hiểu thêm</button>
             </div>
             <img src="./imgs/icons/girl.webp" class="lg:w-1/3 max-md:w-full h-full" alt="">
         </div>
         <!-- giua body -->
-        <div class="flex items-center lg:h-[500px] max-md:flex-col ">
+        <div class="flex items-center lg:h-[700px] max-md:flex-col ">
             <div class="lg:w-1/2 max-md:w-full h-full p-10 bg-[#EFCEDE] text-[#EF0D4A]">
                 <h2 class="lg:text-6xl font-bold py-4 mx-auto Về chúng tôi">
-Về chúng tôi
+Dịch vụ của chúng tôi
                 </h2>
-                <p class="text-sm text-center leading-7">
-                    Heartlink là nhà cung cấp hàng đầu các công nghệ và dịch vụ tiên tiến, cung cấp các giải pháp có khả năng mở rộng cho các doanh nghiệp của mọi kích thước. Được thành lập bởi một nhóm bạn bè bắt đầu bằng việc ghi lại ý tưởng của họ trên một tờ giấy, ngày nay chúng tôi cung cấp các dịch vụ thông minh, đổi mới cho hàng chục khách hàng trên toàn thế giới. Tại sao không tham gia cơ sở khách hàng tăng trưởng nhanh của chúng tôi? Hãy liên hệ với chúng tôi ngay hôm nay để biết thêm thông tin.
+                <p class="text-sm text-left leading-7">
+                    Trải nghiệm đơn giản, tối ưu và tuyệt đối bảo mật thông tin
+                    Test tính cách chuyên sâu: Phân tích giá trị quan, tính cách con người, lối sống, mục tiêu tình cảm và ngôn ngữ tình yêu của bạn. 
+Tạo và xác thực hồ sơ: Hệ thống công nghệ và scan trực tiếp bằng con người giúp hồ sơ phù hợp cao. Hai bên sẽ được sắp xếp gặp nhau trực tiếp.
+Gặp gỡ trực tiếp đối tượng phù hợp: Sắp xếp buổi gặp gỡ theo địa điểm được cá nhân hóa thông qua sở thích của khách hàng.
+
                 </p>
                  <button class="py-2 px-4   rounded-full mt-5 text-white text-lg font-bold bg-red-600 hover:bg-red-500">Xem thêm</button>
             </div>
-            <img src="./imgs/icons/girl_boy.jpg"  class="lg:w-1/2 max-md:w-full h-full" alt="">
+            <img src="./imgs//icons/image123.jpg"  class="lg:w-1/2 max-md:w-full h-full" alt="">
         </div>
-        <!-- phan duoi -->
-        <div class="bg-[#F6D6E5] text-[#EF0D4A]  border-t border-b border-gray-50 flex  justify-between font-bold p-6">
-            <h2 class="text-6xl ">
-                
-Công nghệ <br> đột phá của <br> chúng tôi
-            </h2>
-            <p class="text-3xl">
-                
-Dễ dàng. <br> Nhanh chóng. <br> An toàn.
 
-
-            </p>
-        </div>
-        <!-- duoi nua -->
-        <div class="bg-[#FAEAF2] p-10  text-[#EF0D4A]">
-            <p class="text-left leading-7 text-sm">
-
-Công nghệ đột phá của chúng tôi
-Dễ dàng. Nhanh chóng. An toàn.
-
-Giải pháp thông minh là tâm điểm của tất cả những gì chúng tôi làm tại Heartlink. Mục tiêu chính của chúng tôi là tìm cách thông minh sử dụng công nghệ để giúp xây dựng một tương lai tốt đẹp hơn cho mọi người, ở mọi nơi. Nhấn vào nút bên dưới để tìm hiểu thêm về công nghệ đằng sau Công ty công nghệ của chúng tôi, hoặc liên hệ để đặt cuộc hẹn với một trong các đại diện của chúng tôi.
-            </p>
-            <button class="bg-red-600 hover-bg-red-500 text-white px-4 py-2 mt-2 font-bold rounded-full">tìm hiểu thêm</button>
-        </div>
     </div>
  <!-- message -->
     <button class="fixed bottom-2 right-3 rounded-full bg-red-500 text-white font-bold  px-7 py-2 text-2xl" onclick="handleShowMess()">
@@ -111,29 +105,22 @@ Giải pháp thông minh là tâm điểm của tất cả những gì chúng t�
         </div>
     </div>
     <!-- footer -->
-    <footer class="w-full mt-6  text-white bg-[#EF0D4A] px-20 max-md:px-6 border-t border-white shadow-lg">
-        <p class=" text-2xl mb-2 font-bold pt-10">
-            HeartLink
-        </p>
-        <div class="">
-            <div class="flex items-center max-md:flex-col justify-between">
-                <p class="text-white ">
-                123-456-7890
-                <span class="block leading-5">
-                    heartlinkxinchao@gmail.com
-                </span>
-            </p>
-            <p>
-            279 Nguyễn Tri Phương, Phường 5, Quận 10, TPHCM
-            </p>
+    <footer class="shadow text-left p-4 bg-slate-100">
 
-            </div>
-            <div class="flex items-center">
-                <img src="./imgs//icons/facebook.png" class="px-2  text-white py-2" alt="">
-                <img src="./imgs//icons/ista.png" class="px-2  text-white py-2" alt="">
-                <img src="./imgs//icons/youtube.png" class="px-2  text-white py-2" alt="">
-            </div>
+        <p class="text-3xl py-2 text-black font-bold">Tư vấn trực <br> tiếp tại:</p>
+        <div class="text-left py-6 text-slate-800">
+            <p>279 Nguyễn tri phương</p>
+            <p>Phường 5, Quận 10 ,TP HCM</p>
+            <p>heartlink@gmail.com</p>
+            <p>SDT:024 3456 7890</p>
+        </div>
+        <div class="flex items-center text-slate-800 ">
+            <i class="fa-brands px-2.5 hover:text-blue-600 cursor-pointer text-3xl fa-instagram"></i>
+            <i class="fa-brands px-2.5 hover:text-blue-600 cursor-pointer text-3xl fa-facebook"></i>
+            <i class="fa-brands px-2.5 hover:text-blue-600 cursor-pointer text-3xl fa-twitter"></i>
         </div>
     </footer>
 </body>
+<script src="./javascript/main.js"></script>
+
 </html>

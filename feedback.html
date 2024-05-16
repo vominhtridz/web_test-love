@@ -6,6 +6,9 @@
     <title>Phản hồi</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./fontawesome-free-6.5.2-web/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
+
 </head>
 <body>
      <!-- header -->
@@ -18,7 +21,7 @@
                 Heartlink</p>
            </a>   
            </div>
-           <div class="bg-red-500 px-6 py-6 text-white flex items-center">
+           <div class="bg-red-500 px-6 py-2 text-white flex items-center">
             <ul class=" bg-slate-100 text-gray-600  rounded-full list-none max-md:px-1 flex items-center max-md:overflow-x-scroll whitespace-norwap" id="route_link">
                 <a href="/home.html" class="px-2 py-1 font-bold text-base whitespace-nowrap">Trang chủ</a>
                 <a href="/personalityTest.html" class="px-4 py-1 font-bold text-base whitespace-nowrap">Test tính cách</a>
@@ -28,11 +31,20 @@
                 <a href="/login.html" class="px-4 py-1 font-bold text-base whitespace-nowrap hidden max-md:block">Đăng nhập</a>
                 <a href="/register.html" class="px-4 py-1 font-bold text-base whitespace-nowrap hidden max-md:block">Đăng kí</a>
             </ul>
-            <a class="ml-auto px-4 text-lg font-bold text white block max-md:hidden" href="./register.html">
+             <a class="ml-auto px-4 text-lg font-bold text white block max-md:hidden" id="register" href="./register.html">
                 Đăng kí</a>
 
-                 <a class="px-4 text-lg font-bold text white block max-md:hidden" href="/login.html">
+                 <a class="px-4 text-lg font-bold text white block max-md:hidden" id="login" href="/login.html">
                 Đăng nhập</a>
+                <div class="hidden ml-auto text-lg relative" id="loggedin">
+                    <div class="flex items-center">
+                        <img src="./imgs/icons/user-img.png" class="px-2 w-14" alt=""> user
+                    </div>
+                    <div class="avsolute top-full  w-full shadow bg-white right-0 px-4 py-0.5">
+                        <button class="text-gray-700"  onclick="handleLogout()">
+                        Đăng Xuất
+                    </button>
+                </div>
            </div>
 
     </header>
@@ -151,32 +163,26 @@
         </div>
     </div>
     <!-- footer -->
-    <footer class="w-full mt-6  text-white bg-[#EF0D4A] px-20 border-t border-white shadow-lg">
-        <p class=" text-2xl mb-2 font-bold pt-10">
-            HeartLink
-        </p>
-        <div class="">
-            <div class="flex items-center max-md:flex-col justify-between">
-                <p class="text-white ">
-            123-456-7890
-            <span class="block leading-5">
-                heartlinkxinchao@gmail.com
-            </span>
-            </p>
-            <p>
-            279 Nguyễn Tri Phương, Phường 5, Quận 10, TPHCM
-            </p>
+    <footer class="shadow text-left p-4 bg-slate-100">
 
-            </div>
-            <div class="flex items-center">
-                <img src="./imgs//icons/facebook.png" class="px-2  text-white py-2" alt="">
-                <img src="./imgs//icons/ista.png" class="px-2  text-white py-2" alt="">
-                <img src="./imgs//icons/youtube.png" class="px-2  text-white py-2" alt="">
-            </div>
+        <p class="text-3xl py-2 text-black font-bold">Tư vấn trực <br> tiếp tại:</p>
+        <div class="text-left py-6 text-slate-800">
+            <p>279 Nguyễn tri phương</p>
+            <p>Phường 5, Quận 10 ,TP HCM</p>
+            <p>heartlink@gmail.com</p>
+            <p>SDT:024 3456 7890</p>
+        </div>
+        <div class="flex items-center text-slate-800 ">
+            <i class="fa-brands px-2.5 hover:text-blue-600 cursor-pointer text-3xl fa-instagram"></i>
+            <i class="fa-brands px-2.5 hover:text-blue-600 cursor-pointer text-3xl fa-facebook"></i>
+            <i class="fa-brands px-2.5 hover:text-blue-600 cursor-pointer text-3xl fa-twitter"></i>
         </div>
     </footer>
 </body>
+<script src="./javascript/main.js"></script>
+
 <script>
+
     let feedback = document.getElementById('ratingForm')
     feedback.addEventListener('submit',(e)=>{
         e.preventDefault()
