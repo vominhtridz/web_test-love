@@ -6,6 +6,7 @@
     <title>Kiểm tra tính cách</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./fontawesome-free-6.5.2-web/css/all.min.css">
+    <link rel="stylesheet" href="./main.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
 
    <style>
@@ -13,12 +14,13 @@
         transform: scale(1.6); /* Điều chỉnh kích thước theo tỷ lệ */
          /* Khoảng cách giữa các radio button */
     }
-   
-    
+
+
 </style>
 </head>
-<body>
-     <!-- header -->
+<body >
+   <div class="">
+  <!-- header -->
     <!-- header -->
     <header class="fixed top-0 left-0  right-0 z-20">
            <div class="h-20 bg-[#EF0D4A] px-20 border-b border-white">
@@ -56,7 +58,7 @@
 
     </header>
         <!-- body -->
-        <form class="mt-[160px] px-36 max-lg:px-4 min-h-[30rem]" id="myForm">
+        <form class="mt-[130px] px-36 max-lg:px-4 min-h-[30rem]" id="myForm">
             <h2 id="title_test" class="lg:text-6xl max-lg:text-3xl max-lg:py-2 font-bold text-gray-500 py-6">Test tính cách</h2>
             <p id="content" class="text-left text-sm text-gray-800 py-6 max-lg:py-2">
                 Chào bạn, mời bạn cùng Heartlink bắt đầu hành trình khám phá tính cách, mong muốn và ngôn ngữ tình yêu của bạn thân mình nhé (bộ câu hỏi được Heartlink xây dựng cùng Chuyên gia tâm lý Tình yêu - Hôn nhân Lê Thị Hoa (Phó giáo sư, Tiến sĩ) giúp chúng tôi xác định chính xác con người bạn cũng như đối tượng hẹn hò phù hợp nhất giành cho bạn:
@@ -88,51 +90,75 @@
             <button type="submit" id="next_2" class="hidden rounded-full bg-red-600 lg:px-40 max-lg:w-full max-lg:mt-10 text-lg py-2 text-white hover:bg-red-500" onclick="handleNext_2(this)">Tiếp theo</button>
 
     </form>
-    <div id="result_show"  class="hidden mt-[160px] px-36 max-lg:px-4 min-h-[30rem]">
-        <h2 class="text-4xl font-bold ">Kết quả</h2>
-    <div class="my-4 flex max-lg:flex-col " id="result_show_1">
-<p  class=" p-4 my-2 max-lg:w-full  rounded-md bg-white shadow border border-gray-200  mx-4 text-black leading-5 whitespce-nowrap font-bold text-gray-600 w-1/3 py-6">
-       - Tính cách của bạn Kiên định, chắc chắn: Bạn thường rất truyền thống trong hành vi, và bạn thích làm việc theo kế hoạch, không thích trải nghiệm những thứ mới mẻ và có ít sở thích hơn. Cảm xúc của bạn rất phẳng lặng và khả năng chịu đựng thấp đối với những thế giới quan khác biệt.
-    </p>
-<div class="p-4 rounded-md bg-white shadow border border-gray-200  mx-4 text-black leading-5 w-full">
-   - Bạn thường rất truyền thống trong hành vi, và bạn thích làm việc theo kế hoạch, không thích trải nghiệm những thứ mới mẻ và có ít sở thích hơn. Cảm xúc của bạn rất phẳng lặng và khả năng chịu đựng thấp đối với những thế giới quan khác biệt.
-Bạn là những người yêu sự linh hoạt, không thích bị gò bó. Bạn có tính cách thẳng thắn, bộc trực. Bạn sống trọn cho thì hiện tại, quan tâm tới những điều đã và đang xảy tới chứ không suy xét kỹ tới vấn đề cảm xúc nội tâm hay lý thuyết suông.
-Bạn thích tìm kiếm và cần các nguồn kích thích từ môi trường xung quanh, cơ hội để gia nhập với người khác. Bạn như một biến số thích chuyển động, dễ hiểu và dễ tiếp cận. Thái độ của bạn thường rất tự tin và thoải mái. Bạn được miêu tả như tràn trề sức sống và rất tích cực. 
-Bạn có tính nhạy cảm cao thường có thế giới nội tâm phong phú và dễ dàng đồng cảm với người khác. Bạn dễ dàng thể hiện cảm xúc ra bên ngoài, có thể qua lời nói, hành động hoặc ngôn ngữ cơ thể và thấy khó khăn trong việc kiểm soát cảm xúc, đôi khi có thể phản ứng thái quá hoặc mất kiểm soát trong những tình huống căng thẳng. 
+
+       <div id="result_show" class="hidden mx-10 mt-[150px]">
+            <div class="flex my-16">
+                    <div id="heart" class="w-[45%] ">
+                            <p class="absolute text-2xl  left-32 text-center top-16 z-10 text-white font-bold">
+                        TÍNH CÁCH CỦA BẠN: <br>
+                        Kiên định chắc chắn <br>
+                        Tự do, phóng khoáng <br>
+                        Hòa đồng, mạnh mẽ <br>
+                        Nhạy cảm, hoảng <br>
+                        sợ
+                            </p>
+                    </div>
+                        <p id="result_show_1"  class="bg-white p-4 rounded-md shadow-lg w-[65%] mx-10 text-base border border-gray-300">
+                        Bạn thường rất truyền thống trong hành vi, và bạn thích làm việc theo kế hoạch, không thích trải nghiệm những thứ mới mẻ và có ít sở thích hơn. Cảm xúc của bạn rất phẳng lặng và khả năng chịu đựng thấp đối với những thế giới quan khác biệt.
+                        Bạn là những người yêu sự linh hoạt, không thích bị gò bó. Bạn có tính cách thẳng thắn, bộc trực. Bạn sống trọn cho thì hiện tại, quan tâm tới những điều đã và đang xảy tới chứ không suy xét kỹ tới vấn đề cảm xúc nội tâm hay lý thuyết suông.
+                        Bạn thích tìm kiếm và cần các nguồn kích thích từ môi trường xung quanh, cơ hội để gia nhập với người khác. Bạn như một biến số thích chuyển động, dễ hiểu và dễ tiếp cận. Thái độ của bạn thường rất tự tin và thoải mái. Bạn được miêu tả như tràn trề sức sống và rất tích cực. 
+                        Bạn có tính nhạy cảm cao thường có thế giới nội tâm phong phú và dễ dàng đồng cảm với người khác. Bạn dễ dàng thể hiện cảm xúc ra bên ngoài, có thể qua lời nói, hành động hoặc ngôn ngữ cơ thể và thấy khó khăn trong việc kiểm soát cảm xúc, đôi khi có thể phản ứng thái quá hoặc mất kiểm soát trong những tình huống căng thẳng. 
 
 
 
-</div>
-    </div>
-    <div class="my-4 flex max-lg:flex-col" id="result_show_2">
-<p class="p-4 my-2 max-lg:w-full rounded-md flex items-center justify-center  bg-white shadow border border-gray-200  mx-4 text-black leading-5  whitespce-nowrap font-bold w-1/3 py-6">
-       Mong muốn
-    </p>
-<div class="p-4 rounded-md bg-white shadow border border-gray-200  mx-4 text-black leading-5 w-full">
-   - Bạn thường rất truyền thống trong hành vi, và bạn thích làm việc theo kế hoạch, không thích trải nghiệm những thứ mới mẻ và có ít sở thích hơn. Cảm xúc của bạn rất phẳng lặng và khả năng chịu đựng thấp đối với những thế giới quan khác biệt.
-Bạn là những người yêu sự linh hoạt, không thích bị gò bó. Bạn có tính cách thẳng thắn, bộc trực. Bạn sống trọn cho thì hiện tại, quan tâm tới những điều đã và đang xảy tới chứ không suy xét kỹ tới vấn đề cảm xúc nội tâm hay lý thuyết suông.
-Bạn thích tìm kiếm và cần các nguồn kích thích từ môi trường xung quanh, cơ hội để gia nhập với người khác. Bạn như một biến số thích chuyển động, dễ hiểu và dễ tiếp cận. Thái độ của bạn thường rất tự tin và thoải mái. Bạn được miêu tả như tràn trề sức sống và rất tích cực. 
-Bạn có tính nhạy cảm cao thường có thế giới nội tâm phong phú và dễ dàng đồng cảm với người khác. Bạn dễ dàng thể hiện cảm xúc ra bên ngoài, có thể qua lời nói, hành động hoặc ngôn ngữ cơ thể và thấy khó khăn trong việc kiểm soát cảm xúc, đôi khi có thể phản ứng thái quá hoặc mất kiểm soát trong những tình huống căng thẳng. 
+                        </p>
+            </div>
+            <div class="flex my-16">
+                    <div id="heart" class="w-[45%] ">
+                            <p class="absolute text-2xl  left-32 text-center top-16 z-10 text-white font-bold">
+                        TÍNH CÁCH CỦA BẠN: <br>
+                        Kiên định chắc chắn <br>
+                        Tự do, phóng khoáng <br>
+                        Hòa đồng, mạnh mẽ <br>
+                        Nhạy cảm, hoảng <br>
+                        sợ
+                            </p>
+                    </div>
+                        <p id="result_show_2"  class="bg-white p-4 rounded-md shadow-lg w-[65%] mx-10 text-base border border-gray-300">
+                        Bạn thường rất truyền thống trong hành vi, và bạn thích làm việc theo kế hoạch, không thích trải nghiệm những thứ mới mẻ và có ít sở thích hơn. Cảm xúc của bạn rất phẳng lặng và khả năng chịu đựng thấp đối với những thế giới quan khác biệt.
+                        Bạn là những người yêu sự linh hoạt, không thích bị gò bó. Bạn có tính cách thẳng thắn, bộc trực. Bạn sống trọn cho thì hiện tại, quan tâm tới những điều đã và đang xảy tới chứ không suy xét kỹ tới vấn đề cảm xúc nội tâm hay lý thuyết suông.
+                        Bạn thích tìm kiếm và cần các nguồn kích thích từ môi trường xung quanh, cơ hội để gia nhập với người khác. Bạn như một biến số thích chuyển động, dễ hiểu và dễ tiếp cận. Thái độ của bạn thường rất tự tin và thoải mái. Bạn được miêu tả như tràn trề sức sống và rất tích cực. 
+                        Bạn có tính nhạy cảm cao thường có thế giới nội tâm phong phú và dễ dàng đồng cảm với người khác. Bạn dễ dàng thể hiện cảm xúc ra bên ngoài, có thể qua lời nói, hành động hoặc ngôn ngữ cơ thể và thấy khó khăn trong việc kiểm soát cảm xúc, đôi khi có thể phản ứng thái quá hoặc mất kiểm soát trong những tình huống căng thẳng. 
 
 
 
-</div>
-    </div>
-    <div class="my-4 flex max-lg:flex-col" id="result_show_3">
-<p class=" p-4 my-2 max-lg:w-full rounded-md bg-white shadow items-center justify-center  border border-gray-200  mx-4 text-black leading-5 whitespce-nowrap font-bold text-gray-600 w-1/3 max-lg:w-full py-6">
-       Ngôn ngữ tình yêu của bạn là
-    </p>
-<div class="p-4 rounded-md bg-white shadow border border-gray-200 max-lg:w-full mx-4 text-black leading-5 w-full">
-   - Bạn thường rất truyền thống trong hành vi, và bạn thích làm việc theo kế hoạch, không thích trải nghiệm những thứ mới mẻ và có ít sở thích hơn. Cảm xúc của bạn rất phẳng lặng và khả năng chịu đựng thấp đối với những thế giới quan khác biệt.
-Bạn là những người yêu sự linh hoạt, không thích bị gò bó. Bạn có tính cách thẳng thắn, bộc trực. Bạn sống trọn cho thì hiện tại, quan tâm tới những điều đã và đang xảy tới chứ không suy xét kỹ tới vấn đề cảm xúc nội tâm hay lý thuyết suông.
-Bạn thích tìm kiếm và cần các nguồn kích thích từ môi trường xung quanh, cơ hội để gia nhập với người khác. Bạn như một biến số thích chuyển động, dễ hiểu và dễ tiếp cận. Thái độ của bạn thường rất tự tin và thoải mái. Bạn được miêu tả như tràn trề sức sống và rất tích cực. 
-Bạn có tính nhạy cảm cao thường có thế giới nội tâm phong phú và dễ dàng đồng cảm với người khác. Bạn dễ dàng thể hiện cảm xúc ra bên ngoài, có thể qua lời nói, hành động hoặc ngôn ngữ cơ thể và thấy khó khăn trong việc kiểm soát cảm xúc, đôi khi có thể phản ứng thái quá hoặc mất kiểm soát trong những tình huống căng thẳng. 
+                        </p>
+            </div>
+            <div  class="flex my-16">
+                    <div id="heart" class="w-[45%] ">
+                            <p class="absolute text-2xl  left-32 text-center top-16 z-10 text-white font-bold">
+                        TÍNH CÁCH CỦA BẠN: <br>
+                        Kiên định chắc chắn <br>
+                        Tự do, phóng khoáng <br>
+                        Hòa đồng, mạnh mẽ <br>
+                        Nhạy cảm, hoảng <br>
+                        sợ
+                            </p>
+                    </div>
+                        <p id="result_show_3" class="bg-white p-4 rounded-md shadow-lg w-[65%] mx-10 text-base border border-gray-300">
+                        Bạn thường rất truyền thống trong hành vi, và bạn thích làm việc theo kế hoạch, không thích trải nghiệm những thứ mới mẻ và có ít sở thích hơn. Cảm xúc của bạn rất phẳng lặng và khả năng chịu đựng thấp đối với những thế giới quan khác biệt.
+                        Bạn là những người yêu sự linh hoạt, không thích bị gò bó. Bạn có tính cách thẳng thắn, bộc trực. Bạn sống trọn cho thì hiện tại, quan tâm tới những điều đã và đang xảy tới chứ không suy xét kỹ tới vấn đề cảm xúc nội tâm hay lý thuyết suông.
+                        Bạn thích tìm kiếm và cần các nguồn kích thích từ môi trường xung quanh, cơ hội để gia nhập với người khác. Bạn như một biến số thích chuyển động, dễ hiểu và dễ tiếp cận. Thái độ của bạn thường rất tự tin và thoải mái. Bạn được miêu tả như tràn trề sức sống và rất tích cực. 
+                        Bạn có tính nhạy cảm cao thường có thế giới nội tâm phong phú và dễ dàng đồng cảm với người khác. Bạn dễ dàng thể hiện cảm xúc ra bên ngoài, có thể qua lời nói, hành động hoặc ngôn ngữ cơ thể và thấy khó khăn trong việc kiểm soát cảm xúc, đôi khi có thể phản ứng thái quá hoặc mất kiểm soát trong những tình huống căng thẳng. 
 
 
 
-</div>
-    </div>
-    </div>
+                        </p>
+            </div>
+       </div>
+
+       </div>
+    
 
 
         <!-- message -->
@@ -182,6 +208,7 @@ Bạn có tính nhạy cảm cao thường có thế giới nội tâm phong ph�
             
         </div>
     </footer>
+   </div>
 </body>
 <script>
     var result_show = document.getElementById('result_show')
@@ -923,9 +950,9 @@ countQuestion_2.push(e)
 }
  const handleSend = () => {
 
-const div = result_show_1.querySelector('div')
-const div2 = result_show_2.querySelector('div')
-const div3 = result_show_3.querySelector('div')
+const div = result_show.querySelector('#result_show_1')
+const div2 = result_show.querySelector('#result_show_2')
+const div3 = result_show.querySelector('#result_show_3')
 div.innerHTML = getRandomElement(list_123)
 div2.innerHTML = getRandomElement(list_1234)
 div3.innerHTML = getRandomElement(list_1235)

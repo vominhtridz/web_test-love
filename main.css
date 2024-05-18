@@ -297,3 +297,32 @@ display: block;
 .cards img{
     width: 100px;
 }
+#heart {
+  position: relative;
+  margin-top: 10px;
+ /* Đổi giá trị width thành 800px */
+  height: 400px; /* Đổi giá trị height thành 600px */
+}
+
+#heart::before, #heart::after {
+         content: "";
+    position: absolute;
+    top: 0;
+    width: 251px;
+    height: 375px;
+    border-radius: 110px 110px 0 0;
+    background: red;
+}
+
+#heart::before {
+          left: 252px;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+#heart::after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
